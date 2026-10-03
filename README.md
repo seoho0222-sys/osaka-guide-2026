@@ -1,0 +1,1 @@
+# osaka-guide-2026
