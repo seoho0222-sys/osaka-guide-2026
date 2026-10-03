@@ -1,6 +1,6 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f5f2e9"><title>오사카 3박 4일</title>
 <style>
-:root{--bg:#f5f2e9;--card:#fff;--ink:#202522;--muted:#747872;--line:#e1ddd3;--green:#244f42;--soft:#dfeae5;--red:#7b4447;--sand:#eee5d5}
+:root{--bg:#f4f0e6;--card:#fffdf8;--ink:#252823;--muted:#777970;--line:#ded9cd;--olive:#55664b;--olive-dark:#3f5139;--olive-soft:#e8ebdf;--warm:#eee8dc;--red:#875d58;--sand:#eee5d5;--green:var(--olive-dark);--soft:var(--olive-soft)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR",sans-serif}.wrap{max-width:760px;margin:auto;padding:24px 16px 105px}a{color:inherit;text-decoration:none}
 .hero{padding:10px 4px 22px}.hero-cover{position:relative;min-height:168px;padding:21px 18px 20px;margin:0 -4px 8px;border-radius:0 0 26px 26px;overflow:hidden;display:flex;align-items:flex-end;background:#e9e5da}.hero-photo{position:absolute;inset:0 0 0 38%;background-image:linear-gradient(90deg,#e9e5da 0%,rgba(233,229,218,.78) 18%,rgba(233,229,218,.12) 68%),linear-gradient(0deg,rgba(245,242,233,.5),rgba(245,242,233,.05)),url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Osaka_Castle_-_Japan.jpg?width=1200");background-size:cover;background-position:center}.hero-copy{position:relative;z-index:2;max-width:70%}.hero-cover h1{font-size:35px;line-height:.98;margin:8px 0 10px}.hero-cover h1 span{font-size:23px;font-weight:800}.hero-cover p{font-size:12px;font-weight:750;color:#555c57}.hero-credit{position:absolute;right:10px;bottom:6px;z-index:2;font-size:8px;color:rgba(32,37,34,.5)}.eyebrow{font-size:12px;font-weight:850;letter-spacing:.12em;color:var(--green)}h1{font-size:34px;letter-spacing:-.05em;margin:7px 0 6px}.hero p{margin:0;color:var(--muted);font-size:14px}
 .section{scroll-margin-top:16px;margin:20px 0 30px}.head{display:flex;align-items:end;justify-content:space-between;margin:0 3px 11px}.head h2{font-size:23px;margin:0;letter-spacing:-.035em}.head span{font-size:11px;color:var(--muted)}
@@ -36,6 +36,39 @@
 .source{font-size:10px;color:var(--muted);font-weight:750}.morebtn{width:100%;border:1px solid var(--line);background:#fff;border-radius:14px;padding:11px;font-weight:850;color:var(--green);margin-top:10px}.moreitems{display:none}.moreitems.open{display:contents}.subline{margin-top:7px;font-size:12px;color:var(--muted);font-weight:700}.shop-tier{display:grid;gap:4px;margin-top:10px;padding-top:9px;border-top:1px solid var(--line);font-size:11px}.shop-tier strong{font-size:11px;color:var(--green)}.shop-tier span{color:#555b56}.shop-tier.soft strong{color:var(--muted)}.brandline{margin-top:5px;font-size:12px;line-height:1.55;color:var(--green);font-weight:800}.weatherline{margin:-4px 0 12px;padding:10px 12px;border:1px solid var(--line);background:#fff;border-radius:14px;display:flex;justify-content:space-between;gap:10px;font-size:12px}.weatherline b{font-size:13px}.weatherline a{color:var(--green);font-weight:800}.logicnote{font-size:11px;color:var(--muted);margin:7px 3px 11px;line-height:1.45}
 
 .slotchoices{display:grid;gap:6px;margin-top:9px}.slotchoice{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;padding:9px 10px;border:1px solid var(--line);border-radius:12px;background:#faf9f5}.slotchoice.reco{border-color:#b9cec5;background:#f3f7f5}.slotchoice a{font-size:12px;font-weight:850}.slotchoice p{font-size:10.5px!important;margin:2px 0 0!important;line-height:1.35}.slotchoice .whybadge{font-size:9px;font-weight:850;color:var(--green);background:var(--soft);padding:4px 6px;border-radius:999px;white-space:nowrap}.section-label{margin:17px 3px 7px;font-size:12px;font-weight:900;color:var(--green)}.section-label:first-of-type{margin-top:5px}.simple .mini-meta{margin-top:4px;font-size:10.5px;color:var(--muted)}.simple .reason{margin-top:6px;color:#4d534e;font-size:11px;line-height:1.4}.priority{display:inline-block;margin-bottom:6px;font-size:9px;font-weight:850;color:var(--green);background:var(--soft);padding:4px 7px;border-radius:999px}.priority.soft{background:#f1f0eb;color:#666b66}.cafe-kind{font-size:10px;font-weight:850;color:var(--green);margin-bottom:5px}
+
+/* v2 visual hierarchy — warm neutral base, olive only for state/priority */
+body{background:var(--bg)}
+.card{background:var(--card);box-shadow:0 5px 20px rgba(45,45,35,.035)}
+.hero-cover{background:#e9e3d7}
+.eyebrow{color:#696c63}
+.dayhead small,.kicker,.nearby-title,.section-label,.cafe-kind{color:#696c63}
+.place-link .out{color:#85877f}
+.move{color:#555b53}.move::before{color:#92938c}
+.routebox b,.shop-tier strong,.brandline{color:var(--ink)}
+.shop-tier.soft strong{color:var(--muted)}
+.weatherline a,.morebtn{color:#5d6559}
+.tag.key,.priority,.dist{background:var(--warm);color:#555b53}
+.priority.soft{background:#f1eee7;color:#70726b}
+.media-badge{background:var(--warm);color:#675d4f}
+.editorial .menu::first-line{color:var(--ink)}
+.slotchoice{background:#fbf9f3;border-color:#e4dfd4}
+.slotchoice.reco{position:relative;background:var(--olive-soft);border-color:#b9c3ad;box-shadow:inset 3px 0 0 var(--olive-dark)}
+.slotchoice.reco a{color:var(--olive-dark)}
+.slotchoice .whybadge{background:#efede6;color:#666a62}
+.slotchoice.reco .whybadge{background:var(--olive-dark);color:#fff}
+.chip{background:#fffdf9;color:#4d504a}
+.chip.on{background:var(--olive-dark);border-color:var(--olive-dark);color:#fff;box-shadow:0 3px 10px rgba(63,81,57,.16)}
+.nav{background:rgba(255,253,248,.95);box-shadow:0 8px 28px rgba(45,45,35,.10)}
+.nav a{color:#777970}
+.nav a.active{background:var(--olive-dark);color:#fff}
+.time{color:#696c64;font-variant-numeric:tabular-nums}
+.timeline .row>div:nth-child(2)>b{color:var(--ink)}
+.route-label{color:var(--red)}
+.section-label{font-size:11px;letter-spacing:.015em}
+.fooditem .kicker{font-weight:750}
+.tags .tag{background:#f1eee7;color:#666960}
+.tags .tag.key{background:#ebe7dc;color:#555950}
 </style></head><body><div class="wrap">
 <header class="hero hero-cover"><div class="hero-copy"><div class="eyebrow">OSAKA · 2026</div><h1>오사카<br><span>3박 4일 일정</span></h1><p>10.4 SUN — 10.7 WED · 신사이바시</p></div><div class="hero-photo" role="img" aria-label="오사카성"></div><div class="hero-credit">Osaka Castle · CC BY-SA 4.0</div></header>
 
