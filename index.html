@@ -135,6 +135,12 @@ body{background:var(--bg)}
 #drink .drink-kind,#cafe .cafe-kind{margin-top:4px;font-size:10px;font-weight:850;color:#555b53;line-height:1.3}
 #drink .simple p+.drink-kind{margin-top:4px}
 #drink .drink-kind+p{margin-top:4px}
+
+.slot-note{margin-top:7px!important;font-size:10.5px!important;line-height:1.45!important}
+.foodcard.has-thumb,.cafecard.has-thumb,#drink .card.has-thumb,.shopcard.has-logo{display:grid;grid-template-columns:minmax(0,1fr) 104px;align-items:stretch}
+.card-thumb{width:104px;height:100%;min-height:104px;object-fit:cover;display:block;background:#ece9e1}
+.brand-logo{width:104px;height:100%;min-height:92px;object-fit:contain;padding:22px;background:#fff}
+@media(max-width:380px){.foodcard.has-thumb,.cafecard.has-thumb,#drink .card.has-thumb,.shopcard.has-logo{grid-template-columns:minmax(0,1fr) 92px}.card-thumb,.brand-logo{width:92px}}
 </style></head><body><div class="wrap">
 <header class="hero hero-cover"><div class="hero-copy"><div class="eyebrow">OSAKA · 2026</div><h1>오사카<br><span>3박 4일 일정</span></h1><p>10.4 SUN — 10.7 WED · 신사이바시</p></div><div class="hero-photo" role="img" aria-label="오사카성"></div><div class="hero-credit">Osaka Castle · CC BY-SA 4.0</div></header>
 
@@ -143,18 +149,18 @@ body{background:var(--bg)}
 <button class="chip on" data-day="d1">10/4 일</button><button class="chip" data-day="d2">10/5 월</button><button class="chip" data-day="d3">10/6 화</button><button class="chip" data-day="d4">10/7 수</button>
 </div><div class="weatherline" id="weatherline"><b>10/4 · 흐린 뒤 비</b><span>21° / 19° · 비 60% · <a href="https://weather.yahoo.co.jp/weather/27/6200/27128.html">예보 ↗</a></span></div>
 
-<div class="card day daypanel" id="d1"><div class="dayhead"><div><small>10/4 일 · 도착</small><h3>도착 → 신사이바시 → 도톤보리</h3></div></div><div class="timeline">
+<div class="card day daypanel" id="d1"><div class="dayhead"><div><small>10/4 일 · 도착 · 비</small><h3>도착 → 신사이바시 실내 쇼핑 → 저녁</h3><div class="daypurpose">비 최소 동선 · PARCO/다이마루 중심 · 도톤보리는 비 약할 때</div></div></div><div class="timeline">
 <div class="row"><div class="time">13:10</div><div><b>간사이공항 도착</b><p>입국 · 수하물 수령</p></div></div>
 <div class="row"><div class="time">14:10~</div><div><b>간사이공항 → 난바</b><p>난카이 라피트 또는 공항급행</p><div class="move">열차 약 35~45분</div></div></div>
 <div class="row"><div class="time">15:10쯤</div><div><b>난바 → 아라시 호텔 신사이바시 No.002</b><p>히가시신사이바시 1-16-5</p><div class="move">기본: 미도스지선 난바→신사이바시 1정거장 + 도보 · 캐리어가 크거나 비 오면 택시</div></div></div>
 <div class="row"><div class="time">15:30</div><div><b>체크인 · 30~60분 휴식</b><p>짐 풀고 첫 외출 준비</p></div></div>
-<div class="row"><div class="time">16:30</div><div><b>신사이바시스지 · 신사이바시 PARCO</b><p>첫날은 필요한 매장만 가볍게</p><div class="move">숙소 → 신사이바시역권 도보 약 4~7분</div></div></div>
+<div class="row"><div class="time">16:30</div><div><b>신사이바시 PARCO · 다이마루</b><p>비 오는 첫날은 실내 쇼핑 중심 · HOMME PLISSÉ/HUMAN MADE/Pokémon 등 필요한 매장 우선</p><div class="move">숙소 → 신사이바시역권 도보 약 4~7분 · 이후 건물 안에서 이동</div></div></div>
 <div class="row"><div class="time">18:00</div><div><b>저녁</b><div class="slotchoices">
-<div class="slotchoice reco"><a href="https://www.google.com/maps/search/?api=1&query=%E4%B8%A1%E5%BF%98+%E8%A5%BF%E5%BF%83%E6%96%8E%E6%A9%8B+Osaka" target="_blank" rel="noopener noreferrer">료보 ↗</a><p>정통 야키토리 · 예약 가능</p><span class="whybadge">추천</span></div>
-<div class="slotchoice"><a href="https://www.google.com/maps/search/?api=1&query=Yakitori+Bonzo+Shinsaibashi+Osaka" target="_blank" rel="noopener noreferrer">본조 ↗</a><p>야키토리 · 숙소 도보권</p></div>
-<div class="slotchoice"><a href="https://www.google.com/maps/search/?api=1&query=Sushi+Sakaba+Sashisu+Namba+Walk+Osaka" target="_blank" rel="noopener noreferrer">사시스 ↗</a><p>스시·술 · 난바 방향</p></div>
-</div></div></div>
-<div class="row"><div class="time">20:00</div><div><b>도톤보리 글리코 → 호젠지요코초</b><p>사진 · 산책</p><div class="move">신사이바시에서 남쪽으로 도보 약 10~15분</div></div></div>
+<div class="slotchoice reco"><a href="https://www.google.com/maps/search/?api=1&query=New+Sushi+Center+Shinsaibashi+PARCO+Osaka" target="_blank" rel="noopener noreferrer">뉴 스시 센터 ↗</a><p><b>Google ★4.3 · 606 | Tabelog 3.48</b> · ¥2,000~3,000 · PARCO B2 · 상참치</p><span class="whybadge">오늘 추천</span></div>
+<div class="slotchoice"><a href="https://www.google.com/maps/search/?api=1&query=Kuwadori+Shinsaibashi+Osaka" target="_blank" rel="noopener noreferrer">쿠와도리 ↗</a><p><b>Google ★4.6 · 782 | Tabelog 3.09</b> · ¥3,000~4,000 · 숙소권 · 야키토리 모둠</p></div>
+<div class="slotchoice"><a href="https://www.google.com/maps/search/?api=1&query=Yakitori+Bonzo+Shinsaibashi+Osaka" target="_blank" rel="noopener noreferrer">야키토리 본조 ↗</a><p><b>Google ★4.6 · 800</b> · 히가시신사이바시 · 늦게까지 영업</p></div>
+</div><p class="slot-note">비+쇼핑 동선 때문에 오늘은 PARCO 안의 뉴 스시 센터 우선. 야키토리가 더 당기면 숙소 방향으로 돌아오며 쿠와도리.</p></div></div>
+<div class="row"><div class="time">20:00</div><div><b>비 약하면 도톤보리 글리코 → 호젠지</b><p>비가 계속 세면 오늘은 생략하고 신사이바시 실내/숙소 휴식 · 내일 사진 동선으로 이동</p><div class="move">갈 경우 신사이바시에서 남쪽 도보 약 10~15분</div></div></div>
 <div class="row"><div class="time">21:00</div><div><b><a class="place-link inline-place" href="https://www.google.com/maps/search/?api=1&query=%E6%97%A5%E6%9C%AC%E9%85%92%E3%81%86%E3%81%AA%E3%81%8E%E3%81%A0%E3%81%AB%20%E5%BF%83%E6%96%8E%E6%A9%8B%20Osaka">니혼슈 우나기다니 ↗</a></b><p>사케 100종+ · 다른 주류도 가능</p><div class="move">심야 귀가도 숙소·신사이바시권</div></div></div>
 <div class="row"><div class="time">22:30</div><div><b>숙소 복귀</b></div></div></div>
 <div class="nearby"><div class="nearby-title">20:00 · 도톤보리·호젠지에서 출출하면</div><div class="pick"><div class="pick-main"><a href="https://www.google.com/maps/search/?api=1&query=%E3%81%9F%E3%81%93%E7%84%BC%E9%81%93%E6%A5%BD+%E3%82%8F%E3%81%AA%E3%81%8B+%E5%8D%83%E6%97%A5%E5%89%8D%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener noreferrer">타코야키 와나카 ↗</a><p>오사카 대표 타코야키 · Tabelog 3.49 / 3,197</p></div><span class="dist">난바</span></div><div class="pick"><div class="pick-main"><a href="https://www.google.com/maps/search/?api=1&query=%E6%B3%95%E5%96%84%E5%AF%BA+%E4%B8%89%E5%B9%B3+%E5%A4%A7%E9%98%AA" target="_blank" rel="noopener noreferrer">호젠지 산페이 ↗</a><p>오코노미야키 · 호젠지요코초에서 바로</p></div><span class="dist">호젠지</span></div></div></div>
@@ -232,6 +238,8 @@ body{background:var(--bg)}
 </div></section>
 
 <section id="food" class="section"><div class="head"><h2>먹기</h2></div><div class="scroller filters"><button class="chip on" data-filter="all">전체</button><button class="chip" data-filter="sushi">스시</button><button class="chip" data-filter="yakitori">꼬치</button><button class="chip" data-filter="noodle">면</button><button class="chip" data-filter="meat">고기</button><button class="chip" data-filter="etc">기타</button></div><div class="logicnote">Google 리뷰 우선 · 미디어는 50만+ 영상만 표기</div><div class="grid">
+<article class="card foodcard fooditem noimg verified-text" data-kind="sushi"><div class="body"><div class="kicker">신사이바시 PARCO B2 · <span class="food-price">¥2,000~3,000</span></div><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=New+Sushi+Center+Shinsaibashi+PARCO+Osaka" target="_blank" rel="noopener noreferrer">뉴 스시 센터 <span class="out">↗</span></a><div class="desc"><b>Google ★4.3 · 606</b>　|　Tabelog 3.48</div><div class="editorial"><div class="why">비 오는 오늘 쇼핑 동선 1순위 · PARCO 안.</div><div class="menu">상참치 · 제철 스시 · 후구토후</div></div><div class="tags"><span class="tag key">오늘 추천</span></div></div></article>
+<article class="card foodcard fooditem noimg verified-text" data-kind="yakitori"><div class="body"><div class="kicker">히가시신사이바시 · <span class="food-price">¥3,000~4,000</span></div><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Kuwadori+Shinsaibashi+Osaka" target="_blank" rel="noopener noreferrer">쿠와도리 신사이바시 <span class="out">↗</span></a><div class="desc"><b>Google ★4.6 · 782</b>　|　Tabelog 3.09</div><div class="editorial"><div class="why">숙소 방향 · 아내분 야키토리 우선 대안.</div><div class="menu">야키토리 모둠 · 네기마 · 치킨난반</div></div></div></article>
 <article class="card foodcard fooditem noimg verified-text" data-kind="sushi"><div class="body"><div class="kicker">난바워크 · <span class="food-price">¥2,000~3,000</span></div><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Sushi+Sakaba+Sashisu+Namba+Walk+Osaka" target="_blank" rel="noopener noreferrer">스시 사카바 사시스 <span class="out">↗</span></a><div class="desc"><b>Google ★4.3 · 2,177</b>　|　Tabelog 3.32</div><div class="editorial"><div class="why">스시+술. 줄 길면 다른 후보로.</div><div class="menu">토로철화말이 · 토로타쿠 · 우니쿠</div><span class="media-badge">할명수 · 208만</span></div></div></article>
 <article class="card foodcard fooditem noimg verified-text" data-kind="meat"><div class="body"><div class="kicker">아메리카무라 · <span class="food-price">¥3,000~4,000</span></div><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Nikugoro+Amerikamura+Osaka" target="_blank" rel="noopener noreferrer">니쿠고로 아메리카무라 <span class="out">↗</span></a><div class="desc"><b>Google ★4.9 · 563</b></div><div class="editorial"><div class="why">10/5 아메무라 쇼핑 동선.</div><div class="menu">야키니쿠 · 호르몬</div></div><div class="tags"><span class="tag key">동선 추천</span></div></div></article>
 
