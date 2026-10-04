@@ -366,6 +366,9 @@ b,strong,.brandline,.row b,.time,.kicker,.place-link,.priority,.nearby-title,.se
 #schedule .timeline .slotchoice p{font-size:11.5px!important}
 #schedule .timeline .move{font-size:11.5px!important}
 @media(max-width:420px){#schedule .daypanel{padding:15px 13px!important}}
+#food .directory-card .kicker{display:flex!important;align-items:center;gap:7px;flex-wrap:wrap;line-height:1.5!important;margin-bottom:5px!important;font-size:10.5px!important;color:#758394!important}
+#food .directory-area-badge{background:#E8EFF7;color:#294867;display:inline-block;padding:3px 7px;border-radius:6px;font-weight:600;white-space:nowrap}
+#food .directory-card .directory-menu{display:none!important}
 </style></head><body><div class="wrap">
 <header class="hero hero-cover"><div class="hero-copy"><div class="eyebrow">OSAKA · 2026</div><h1>오사카<br><span>3박 4일 일정</span></h1><p>10.4 SUN — 10.7 WED · 신사이바시</p></div><div class="hero-photo" role="img" aria-label="오사카성"></div><div class="hero-credit">Osaka Castle · CC BY-SA 4.0</div></header>
 
@@ -604,29 +607,25 @@ document.querySelectorAll('.shop-check input').forEach((box,i)=>{
  });
 })();
 
-/* Unified restaurant card: category -> name -> Google rating / indicative budget -> menu. */
+/* Restaurant hierarchy: location badge + nonredundant food keywords. */
 (function(){
- const category={sushi:'스시',eel:'장어',noodle:'라멘',meat:'고기',robatayaki:'로바타',izakaya:'이자카야',etc:'기타'};
+ const labels={sushi:'스시',eel:'장어',noodle:'라멘',meat:'고기',robatayaki:'로바타',izakaya:'이자카야',etc:'기타'};
  const budgets={sushi:'¥2,000~5,000',eel:'¥3,000~6,000',noodle:'¥1,000~2,000',meat:'¥3,000~6,000',robatayaki:'¥3,000~5,000',izakaya:'¥3,000~5,000',etc:'매장별 상이'};
- document.querySelectorAll('#food .directory-card').forEach(card=>{
-  const kind=card.dataset.kind;
+ const places={shinsaibashi:'신사이바시',namba:'난바',umeda:'우메다'};
+ document.querySelectorAll('#food .area-group').forEach(group=>group.querySelectorAll('.directory-card').forEach(card=>{
+  const raw=card.querySelector('.kicker')?.textContent.trim()||'';
+  const menu=card.querySelector('.directory-menu'),menuText=menu?.textContent.trim()||'';
+  const price=(raw+' '+menuText).match(/¥[\\d,]+(?:\\s*[~～-]\\s*¥?[\\d,]+)?/);
+  const tokens=[labels[card.dataset.kind],...raw.split('·'),...menuText.split('·')]
+    .map(x=>x.trim()).filter(x=>x&&!x.includes('¥')&&!/\\d+(?:F|층|분|시|점)$/.test(x));
+  const unique=[...new Set(tokens)].filter(t=>!tokens.some(other=>other!==t&&other.replace(/\\s/g,'').includes(t.replace(/\\s/g,'')))) ;
+  const category=unique.filter(t=>!/(신사이바시|난바|우메다|도톤보리|PARCO|오사카역|차야마치|호리에|그랜드|한큐|LUCUA)/i.test(t)).slice(0,3);
   const kicker=card.querySelector('.kicker');
-  const raw=kicker?.textContent.trim()||'';
-  if(kicker)kicker.textContent=category[kind]||'음식';
-  const menu=card.querySelector('.directory-menu');
-  const menuText=menu?.textContent.trim()||'';
-  const details=raw.split('·').map(x=>x.trim()).filter(Boolean);
-  const candidates=[...details,menuText].filter(Boolean);
-  const normalized=candidates.filter(t=>t!==(category[kind]||'')&&!['스시','장어','라멘','고기','이자카야','야키니쿠'].includes(t));
-  const unique=[...new Set(normalized)];
-  if(menu){menu.textContent=unique.join(' · ').slice(0,65);menu.hidden=!unique.length;}
-  else if(unique.length){const div=document.createElement('div');div.className='directory-menu';div.textContent=unique.join(' · ').slice(0,65);card.querySelector('.directory-score')?.after(div);}
-  const price=(raw+' '+menuText).match(/¥[\d,]+(?:\s*[~～-]\s*¥?[\d,]+)?/);
-  const priceText=price?.[0]||budgets[kind]||'매장별 상이';
-  const priceNode=document.createElement('span');priceNode.className='directory-budget';
-  priceNode.textContent=(price?'대략 ':'참고 예산 ')+priceText;
-  card.querySelector('.directory-score')?.appendChild(priceNode);
- });
+  if(kicker){kicker.textContent='';const place=document.createElement('span');place.className='directory-area-badge';place.textContent=places[group.dataset.area]||'';kicker.append(place,document.createTextNode(category.join(' · ')));}
+  if(menu)menu.remove();
+  const score=card.querySelector('.directory-score');
+  if(score&&!score.querySelector('.directory-budget')){const node=document.createElement('span');node.className='directory-budget';node.textContent=(price?'대략 ':'참고 예산 ')+(price?.[0]||budgets[card.dataset.kind]||'매장별 상이');score.appendChild(node);}
+ }));
 })();
 </script><!-- Food illustrations are category examples, not merchant photography. Credits: Japanese Sushi platter (Luvpixy, CC BY-SA 4.0); Hitsumabushi by Joi (Joi, CC BY 2.0); Souffe pancakes (76651) (Rhododendrites, CC BY-SA 4.0); A bowl of ramen in Osaka (Joli Rumi, Wikimedia Commons). -->
 </body></html>
