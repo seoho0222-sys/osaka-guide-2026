@@ -470,7 +470,7 @@ document.querySelectorAll('.shop-check input').forEach((box,i)=>{
    return selected.join(' · ').slice(0,96);
  };
  document.querySelectorAll('#food .directory-why,#food .directory-menu,#cafe .reason,#drink .editorial .why,#shop .card.simple>p,#shop .shop-step p,#schedule .daypurpose,#schedule .timeline .row p').forEach(el=>{
-   const t=el.textContent.trim();if(t.length<32)return;
+   if(el.children.length||el.querySelector('a, b, strong, span, br'))return; const t=el.textContent.trim();if(t.length<32)return;
    el.title=t;
    const v=brief(t,el.closest('#schedule')?2:3);
    if(v&&v.length<t.length)el.textContent=v;
