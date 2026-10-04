@@ -1,6 +1,6 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f5f2e9"><title>오사카 3박 4일</title>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f7f8fa"><title>오사카 3박 4일</title>
 <style>
-:root{--bg:#f4f0e6;--card:#fffdf8;--ink:#252823;--muted:#777970;--line:#ded9cd;--olive:#55664b;--olive-dark:#3f5139;--olive-soft:#e8ebdf;--warm:#eee8dc;--red:#875d58;--sand:#eee5d5;--green:var(--olive-dark);--soft:var(--olive-soft)}
+:root{--bg:#F7F8FA;--card:#FFFFFF;--ink:#24272B;--muted:#6A7380;--line:#E5E9EE;--olive:#253B53;--olive-dark:#253B53;--olive-soft:#EAF0F5;--warm:#F1F4F7;--red:#9D5657;--sand:#F1F4F7;--green:#253B53;--soft:#EAF0F5}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR",sans-serif}.wrap{max-width:760px;margin:auto;padding:24px 16px 105px}a{color:inherit;text-decoration:none}
 .hero{padding:10px 4px 22px}.hero-cover{position:relative;min-height:168px;padding:21px 18px 20px;margin:0 -4px 8px;border-radius:0 0 26px 26px;overflow:hidden;display:flex;align-items:flex-end;background:#e9e5da}.hero-photo{position:absolute;inset:0 0 0 38%;background-image:linear-gradient(90deg,#e9e5da 0%,rgba(233,229,218,.78) 18%,rgba(233,229,218,.12) 68%),linear-gradient(0deg,rgba(245,242,233,.5),rgba(245,242,233,.05)),url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Osaka_Castle_-_Japan.jpg?width=1200");background-size:cover;background-position:center}.hero-copy{position:relative;z-index:2;max-width:70%}.hero-cover h1{font-size:35px;line-height:.98;margin:8px 0 10px}.hero-cover h1 span{font-size:23px;font-weight:800}.hero-cover p{font-size:12px;font-weight:750;color:#555c57}.hero-credit{position:absolute;right:10px;bottom:6px;z-index:2;font-size:8px;color:rgba(32,37,34,.5)}.eyebrow{font-size:12px;font-weight:850;letter-spacing:.12em;color:var(--green)}h1{font-size:34px;letter-spacing:-.05em;margin:7px 0 6px}.hero p{margin:0;color:var(--muted);font-size:14px}
 .section{scroll-margin-top:16px;margin:20px 0 30px}.head{display:flex;align-items:end;justify-content:space-between;margin:0 3px 11px}.head h2{font-size:23px;margin:0;letter-spacing:-.035em}.head span{font-size:11px;color:var(--muted)}
@@ -176,6 +176,16 @@ body{background:var(--bg)}
 #drink .drink-grid{display:grid;gap:5px}#drink .drink-grid .card{padding:12px 13px;margin:0}#drink .drink-grid .drink-extra{display:none}#drink.show-all .drink-extra{display:block}#drink .mini-meta{font-size:11px;color:#656960;margin:4px 0}#drink .area-filters{margin-bottom:7px}
 /* Actual venue imagery: never duplicate illustrative photos across establishments. */
 #cafe .photo-card{display:block!important}#cafe .photo-card .mini-meta{display:block}#cafe .photo-access{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:6px;padding:8px 10px;border-radius:8px;background:#f0eee8;color:#52594f;font-size:10px}#cafe .photo-access strong{font-size:10px;color:#425a43}#cafe .photo-card>.mini-meta{grid-column:auto}.shop-route{padding:8px 14px;margin:8px 0 12px}.shop-step{padding:10px 0;border-bottom:1px solid #e9e5da}.shop-step:last-child{border:0}.shop-step b{font-size:13px}.shop-step p{margin:4px 0 0;font-size:11px;line-height:1.5;color:#696d65}.shop-spotlight .card{margin:0}.shop-spotlight{gap:6px!important}
+
+/* white and navy reading theme */
+body,.wrap{background:var(--bg);color:var(--ink)}.card,.nearby,.weatherline{background:#fff;border-color:var(--line);box-shadow:0 3px 13px rgba(28,48,65,.025)}
+.hero-cover{background:#F1F4F7}.daychips{background:rgba(247,248,250,.96);border-color:var(--line)}
+.eyebrow,.dayhead small,.kicker,.nearby-title,.section-label,.cafe-kind,.time{color:#627081}
+.nav{background:rgba(255,255,255,.97);border-color:var(--line)}.nav a.active,.chip.on,#food .kind.on{background:#253B53!important;border-color:#253B53!important;color:#fff!important}
+.nav a:not(.active){color:#6A7380}.tag.key,.priority,.dist{background:#EAF0F5;color:#253B53}
+#food .directory-score b,#food .directory-card .place-link,#cafe .place-link,#drink .place-link{color:var(--ink)}
+.area-filters{background:linear-gradient(#F7F8FA 80%,transparent)}.morebtn{background:#fff;border-color:var(--line);color:#253B53}
+.section{scroll-margin-top:12px}
 </style></head><body><div class="wrap">
 <header class="hero hero-cover"><div class="hero-copy"><div class="eyebrow">OSAKA · 2026</div><h1>오사카<br><span>3박 4일 일정</span></h1><p>10.4 SUN — 10.7 WED · 신사이바시</p></div><div class="hero-photo" role="img" aria-label="오사카성"></div><div class="hero-credit">Osaka Castle · CC BY-SA 4.0</div></header>
 
@@ -320,7 +330,25 @@ document.querySelectorAll('[data-jump-area]').forEach(a=>a.addEventListener('cli
 function updateCuisine(){const active=document.querySelector('#food .kind.on')?.dataset.kind||'all';document.querySelectorAll('#food .area-group').forEach(g=>{const entries=[...g.querySelectorAll('.restaurant-entry')];entries.forEach((el,i)=>{const matches=active==='all'||el.firstElementChild.dataset.kind===active;el.classList.toggle('kind-hidden',!matches);el.classList.toggle('extra-entry',active==='all'?i>=5:entries.filter(e=>active==='all'||e.firstElementChild.dataset.kind===active).indexOf(el)>=5)});const extra=entries.filter(e=>!e.classList.contains('kind-hidden')&&e.classList.contains('extra-entry')).length;const btn=g.querySelector('.restaurant-more');if(btn){btn.style.display=extra?'block':'none';btn.textContent=g.classList.contains('expanded')?'접기':'맛집 더 보기 · '+extra+'곳';}})}
 document.querySelectorAll('#food .kind').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('#food .kind').forEach(k=>k.classList.remove('on'));btn.classList.add('on');document.querySelectorAll('#food .area-group').forEach(g=>g.classList.remove('expanded'));updateCuisine()}));
 document.querySelectorAll('#food .restaurant-more').forEach(btn=>btn.addEventListener('click',()=>{btn.closest('.area-group').classList.toggle('expanded');updateCuisine()}));updateCuisine();
-document.getElementById('drinkMore')?.addEventListener('click',e=>{const d=document.getElementById('drink');d.classList.toggle('show-all');e.target.textContent=d.classList.contains('show-all')?'접기':'더 보기'});const drinkArea=document.querySelector('#drink .area-filters');if(drinkArea){drinkArea.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{document.querySelector('#drink')?.classList.add('show-all');const m=document.getElementById('drinkMore');if(m)m.textContent='접기';}));}const nav=[...document.querySelectorAll('.nav a')];nav.forEach(a=>a.onclick=()=>{nav.forEach(x=>x.classList.remove('active'));a.classList.add('active')});
+document.getElementById('drinkMore')?.addEventListener('click',e=>{const d=document.getElementById('drink');d.classList.toggle('show-all');e.target.textContent=d.classList.contains('show-all')?'접기':'더 보기'});const drinkArea=document.querySelector('#drink .area-filters');if(drinkArea){drinkArea.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{document.querySelector('#drink')?.classList.add('show-all');const m=document.getElementById('drinkMore');if(m)m.textContent='접기';}));}const nav=[...document.querySelectorAll('.nav a')];
+const sections=nav.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+let navLockUntil=0;
+function syncActiveNav(){
+ if(performance.now()<navLockUntil)return;
+ const marker=Math.min(155,window.innerHeight*.23);
+ let active=sections[0];
+ for(const s of sections){if(s.getBoundingClientRect().top<=marker) active=s;}
+ const bottom=document.documentElement.scrollHeight-window.innerHeight-window.scrollY;
+ if(bottom<12)active=sections[sections.length-1];
+ if(!active)return;
+ nav.forEach(a=>{const on=a.getAttribute('href')==='#'+active.id;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
+}
+nav.forEach(a=>a.addEventListener('click',()=>{navLockUntil=performance.now()+500;nav.forEach(x=>{const on=x===a;x.classList.toggle('active',on);if(on)x.setAttribute('aria-current','location');else x.removeAttribute('aria-current');});}));
+let scrollTick=false;
+window.addEventListener('scroll',()=>{if(scrollTick)return;scrollTick=true;requestAnimationFrame(()=>{scrollTick=false;syncActiveNav();});},{passive:true});
+window.addEventListener('resize',syncActiveNav,{passive:true});
+window.addEventListener('hashchange',()=>{navLockUntil=0;syncActiveNav()});
+syncActiveNav();
 const md=('0'+(new Date().getMonth()+1)).slice(-2)+'-'+('0'+new Date().getDate()).slice(-2);const map={'10-04':'d1','10-05':'d2','10-06':'d3','10-07':'d4'};if(map[md])document.querySelector('.daychips [data-day="'+map[md]+'"]')?.click();
 
 const daybar=document.querySelector('.daychips');
