@@ -300,6 +300,43 @@ html{scroll-padding-top:12px}
 #food .directory-card .venue-photo-link{font-weight:500!important;text-decoration:none!important}
 #food .directory-card{padding:12px 13px!important;box-shadow:none!important}
 #food .section-label{font-weight:680!important}
+
+/* v2 mobile schedule: continuous timeline, compact headings, softer type */
+:root{--type-semibold:600}
+h1,.hero-cover h1,.hero-cover h1 span,.head h2,.dayhead h3{font-weight:650!important}
+b,strong,.brandline,.row b,.time,.kicker,.place-link,.priority,.nearby-title,.section-label,.slotchoice a,.weatherline b{font-weight:600!important}
+.chip,.kind,.nav a,.tag,.morebtn,.routebox b,.dayhead small,.eyebrow{font-weight:600!important}
+#schedule .daypanel{padding:13px 13px 13px!important;border:1px solid #E1E7EE!important;border-radius:18px!important;box-shadow:none!important}
+#schedule .dayhead{border:0!important;padding:3px 2px 15px!important}
+#schedule .dayhead h3{font-size:17px!important;line-height:1.32!important;font-weight:650!important}
+#schedule .dayhead small{font-size:11px!important;font-weight:600!important;color:#64758A!important}
+#schedule .daypurpose{margin-top:5px!important;font-size:11px!important;line-height:1.4!important;color:#8290A0!important}
+#schedule .timeline{position:relative;margin:0!important;padding:0 0 0 0!important}
+#schedule .timeline:before{content:"";position:absolute;top:19px;bottom:24px;left:71px;width:2px;background:#E2E9F0;pointer-events:none}
+#schedule .timeline>.row{position:relative;display:grid!important;grid-template-columns:58px minmax(0,1fr)!important;gap:24px!important;padding:10px 0 14px!important;border:0!important;align-items:start}
+#schedule .timeline>.row:before{content:"";position:absolute;left:66px;top:17px;width:10px;height:10px;background:#fff;border:2px solid #A6B7C8;border-radius:50%;box-sizing:border-box;z-index:1}
+#schedule .timeline>.row:has(.slotchoices):before,#schedule .timeline>.row:has(.brandline):before{background:#263F59;border-color:#263F59}
+#schedule .timeline>.row:last-child{padding-bottom:3px!important}
+#schedule .timeline>.row>.time{font-size:11px!important;font-weight:600!important;color:#68798D!important;text-align:right;white-space:nowrap;line-height:1.6;padding-top:0}
+#schedule .timeline>.row>div:nth-child(2){min-width:0;padding:0 1px 8px 0}
+#schedule .timeline>.row>div:nth-child(2)>b{display:block;font-size:13.5px!important;font-weight:650!important;letter-spacing:-.025em;line-height:1.43}
+#schedule .timeline .row p{font-size:11px!important;color:#7A8796!important;line-height:1.48!important;margin:3px 0 0!important;overflow-wrap:anywhere}
+#schedule .timeline .move{font-size:10.5px!important;line-height:1.45!important;font-weight:500!important;color:#718497!important;margin-top:4px!important}
+#schedule .timeline .routebox{border:0!important;margin:6px 0 0!important;padding:7px 9px!important;background:#F3F6FA!important;border-radius:9px!important;font-size:11px!important}
+#schedule .timeline .slotchoices{display:flex!important;flex-direction:column!important;gap:0!important;margin-top:7px!important}
+#schedule .timeline .slotchoice{display:block!important;padding:8px 0!important;border-top:1px solid #EDF1F5!important;min-width:0}
+#schedule .timeline .slotchoice:first-child{border:0!important}
+#schedule .timeline .slotchoice a{display:inline!important;white-space:normal!important;font-size:12px!important;font-weight:600!important}
+#schedule .timeline .slotchoice p{display:block!important;font-size:10.5px!important;line-height:1.4!important;white-space:normal!important;margin:2px 0 0!important}
+#schedule .timeline .slotchoice .whybadge{display:inline-block!important;position:static!important;vertical-align:baseline;margin-left:5px!important;padding:2px 5px!important;font-size:9px!important;font-weight:600!important}
+#schedule .timeline .slot-note{color:#84909D!important;font-size:10px!important}
+#schedule .nearby{background:#F6F8FB!important;border:0!important;border-radius:12px!important;padding:10px 12px!important;margin-top:13px!important}
+#schedule .nearby-title{font-size:11px!important}
+#schedule .nearby .pick{padding:7px 0!important}
+#schedule .nearby .pick a{font-size:12px!important;font-weight:600!important}
+#schedule .weatherline{font-size:11px!important;padding:9px 11px!important}
+#schedule .daychips .chip{font-weight:600!important}
+@media(max-width:420px){#schedule .timeline:before{left:65px}#schedule .timeline>.row{grid-template-columns:52px minmax(0,1fr)!important;gap:24px!important}#schedule .timeline>.row:before{left:60px}#schedule .daypanel{padding:12px 12px!important}}
 </style></head><body><div class="wrap">
 <header class="hero hero-cover"><div class="hero-copy"><div class="eyebrow">OSAKA · 2026</div><h1>오사카<br><span>3박 4일 일정</span></h1><p>10.4 SUN — 10.7 WED · 신사이바시</p></div><div class="hero-photo" role="img" aria-label="오사카성"></div><div class="hero-credit">Osaka Castle · CC BY-SA 4.0</div></header>
 
