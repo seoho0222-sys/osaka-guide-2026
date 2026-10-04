@@ -413,7 +413,7 @@ const filters=[...document.querySelectorAll('.filters .chip')];
 filters.forEach(b=>b.onclick=()=>{filters.forEach(x=>x.classList.remove('on'));b.classList.add('on');const f=b.dataset.filter;applyFoodView(f)});
 document.querySelectorAll('[data-more]').forEach(b=>b.onclick=()=>{const el=document.getElementById(b.dataset.more);el.classList.toggle('open');const open=el.classList.contains('open');b.textContent=open?'접기':'디저트 후보 더 보기';if(open){el.after(b)}else{el.before(b)}});applyFoodView('all');
 
-document.querySelectorAll('.area-filters').forEach(bar=>{bar.querySelectorAll('.chip').forEach(btn=>btn.onclick=()=>{bar.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));btn.classList.add('on');const section=bar.closest('.section'),area=btn.dataset.area;section.querySelectorAll('.area-group').forEach(g=>g.classList.toggle('hidden-area',area!=='all'&&g.dataset.area!==area));if(section?.id==='food')updateCuisine();});});
+document.querySelectorAll('.area-filters').forEach(bar=>{bar.querySelectorAll('.chip').forEach(btn=>btn.onclick=()=>{bar.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));btn.classList.add('on');const section=bar.closest('.section'),area=btn.dataset.area;if(section?.id==='food'){section.querySelectorAll('.area-group').forEach(g=>g.classList.remove('hidden-area'));updateCuisine();}else{section.querySelectorAll('.area-group').forEach(g=>g.classList.toggle('hidden-area',area!=='all'&&g.dataset.area!==area));}});});
 document.querySelectorAll('[data-jump-area]').forEach(a=>a.addEventListener('click',()=>{const bar=document.querySelector('#food .area-filters');bar?.querySelector('[data-area="'+a.dataset.jumpArea+'"]')?.click();document.querySelector('#food .restaurant-tools')?.scrollIntoView({behavior:'smooth',block:'start'});}));
 function updateCuisine(){
  const kind=document.querySelector('#food .kind.on')?.dataset.kind||'all';
@@ -463,7 +463,7 @@ document.getElementById('foodReset')?.addEventListener('click',()=>{
  document.getElementById('foodSearch').value='';document.getElementById('foodSort').value='recommended';
  document.querySelectorAll('#food .kind').forEach(x=>x.classList.toggle('on',x.dataset.kind==='all'));
  document.querySelectorAll('#food .area-filters .chip').forEach(x=>x.classList.toggle('on',x.dataset.area==='all'));
- document.querySelectorAll('#food .area-group').forEach(g=>g.classList.remove('expanded'));
+ document.querySelectorAll('#food .area-group').forEach(g=>{g.classList.remove('expanded','hidden-area')});
  updateCuisine();
 });
 updateCuisine();
