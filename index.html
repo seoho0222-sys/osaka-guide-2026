@@ -78,7 +78,7 @@ body{background:var(--bg)}
 /* compact restaurant scan UI */
 #food .logicnote{font-size:10px;line-height:1.35;margin:2px 3px 9px}
 #food .grid{display:block}
-#food .foodcard{position:relative;min-height:132px;margin:8px 0;padding:0;overflow:hidden}
+#food .foodcard{position:relative;min-height:132px;margin:5px 0;padding:0;overflow:hidden}
 #food .foodcard .body{padding:13px 126px 12px 14px;min-height:132px}
 #food .foodcard.noimg .body{padding-right:14px}
 #food .foodcard>img{position:absolute;right:10px;top:10px;width:106px;height:106px;border-radius:12px;object-fit:cover}
@@ -96,13 +96,13 @@ body{background:var(--bg)}
 @media(min-width:620px){#food .grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}#food .foodcard{margin:0}#food .foodcard .body{padding-right:110px}#food .foodcard>img{width:90px;height:90px}}
 
 #food .foodcard.noimg .body{padding:13px 14px 12px;min-height:0}
-#cafe .cafe-grid{display:grid;gap:8px}
+#cafe .cafe-grid{display:grid;gap:5px}
 #cafe .simple{padding:13px 14px;margin:0}
 #cafe .simple .place-link{font-size:15px}
 #cafe .simple .reason{margin-top:4px}
 #cafe .morebtn{margin:9px 0 3px}
 #cafe .moreitems.open{display:block}
-#drink .grid{display:grid;gap:8px}
+#drink .grid{display:grid;gap:5px}
 #drink .card{margin:0}
 #drink .simple,#drink .foodcard .body{padding:13px 14px}
 #drink .foodcard>img{height:118px}
@@ -115,7 +115,7 @@ body{background:var(--bg)}
 @media(min-width:620px){#cafe .cafe-grid,#drink .grid{grid-template-columns:1fr 1fr}}
 
 /* final mobile scan rhythm */
-#food .card,#cafe .card,#drink .card{border-radius:18px}
+#food .card,#cafe .card,#drink .card{border-radius:16px}
 #food .place-link,#cafe .place-link,#drink .place-link{font-size:16px;font-weight:850;letter-spacing:-.035em}
 #food .kicker,#drink .kicker,#cafe .cafe-kind{font-size:10px;line-height:1.3}
 #food .desc,#cafe .mini-meta,#drink .desc,#drink .simple p{font-size:11px;color:#6b6e68}
@@ -124,7 +124,7 @@ body{background:var(--bg)}
 #food .editorial .why,#cafe .reason,#drink .editorial .why{font-size:10.5px;line-height:1.35}
 #food .editorial .menu,#drink .editorial .menu{font-size:11px;margin-top:5px}
 #food .media-badge,#cafe .media-badge,#drink .media-badge{height:20px;box-sizing:border-box;display:inline-flex;align-items:center;padding:0 7px;font-size:9px;line-height:1;white-space:nowrap}
-#food .grid,#cafe .cafe-grid,#drink .grid{gap:8px}
+#food .grid,#cafe .cafe-grid,#drink .grid{gap:5px}
 #cafe .section-label,#drink .section-label{margin-top:15px}
 #drink .foodcard .body{padding:13px 14px}
 #drink .foodcard>img{display:none}
@@ -251,10 +251,23 @@ body{background:var(--bg)}
 <article class="card foodcard fooditem noimg verified-text" data-kind="robatayaki"><div class="body"><div class="kicker">히가시신사이바시 · 로바타</div><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Robatayaki+Kakurechaya+Shinsaibashi+Osaka" target="_blank" rel="noopener noreferrer">로바타야키 카쿠레차야 <span class="out">↗</span></a><div class="desc"><b>Google ★4.2 · 901</b></div><div class="editorial"><div class="why">숙소권 로바타 카드. 해산물·채소·고기 선택 폭이 넓고 신사이바시역에서도 가까움.</div><div class="menu">가리비 · 오징어 · 생선구이 · 채소구이</div></div><div class="tags"><span class="tag key">숙소 가까움</span></div></div></article>
 <article class="card foodcard fooditem noimg verified-text" data-kind="robatayaki"><div class="body"><div class="kicker">난바 · 로바타</div><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Robatayaki+Mizukakechaya+Namba+Osaka" target="_blank" rel="noopener noreferrer">로바타야키 미즈카케차야 <span class="out">↗</span></a><div class="desc"><b>Google ★4.0 · 1,517</b></div><div class="editorial"><div class="why">난바에서 놀다 바로 들어갈 로바타. 표본은 크지만 별점은 기준선이라 카쿠레차야보다 후순위.</div><div class="menu">가리비 · 해산물 · 꼬치구이</div></div></div></article>
 <article class="card foodcard fooditem noimg verified-text" data-kind="izakaya"><div class="body"><div class="kicker">난바 · 캐주얼 이자카야</div><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Osusumeya+Namba+Osaka" target="_blank" rel="noopener noreferrer">오스스메야 난바 <span class="out">↗</span></a><div class="desc"><b>Google ★4.6 · 1,704</b></div><div class="editorial"><div class="why">늦게 편하게 술+여러 메뉴 먹을 때. 가성비형 일반 이자카야.</div><div class="menu">나베 · 일품요리 · 술</div></div></div></article>
+</div>
+<div class="section-label">Google 리뷰 많은 추가 후보 · 일정 근처</div><div class="grid">
+<article class="card foodcard fooditem noimg verified-text" data-kind="sushi"><div class="body"><div class="kicker">LUCUA Osaka B2 · 스시</div><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=SUSHI+RESTAURANT+HIBI+HAREBARE+LUCUA+Osaka" target="_blank" rel="noopener noreferrer">HIBI HAREBARE <span class="out">↗</span></a><div class="desc"><b>Google ★4.7 · 2,348</b></div><div class="editorial"><div class="why">LUCUA lululemon 일정과 붙이기 쉬움. QR 주문·영어 대응 후기 좋고 가격 부담도 낮은 편.</div><div class="menu">스시 · 우니 푸딩 · 해산물</div></div><div class="tags"><span class="tag key">리뷰 대형</span></div></div></article>
+<article class="card foodcard fooditem noimg verified-text" data-kind="meat"><div class="body"><div class="kicker">우메다 · 야키니쿠</div><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Yakiniku+Lab+Umeda+Osaka" target="_blank" rel="noopener noreferrer">Yakiniku LAB 우메다 <span class="out">↗</span></a><div class="desc"><b>Google ★4.7 · 5,890</b></div><div class="editorial"><div class="why">압도적으로 큰 리뷰 표본. 고기 당길 때 선택하는 우메다 대안.</div><div class="menu">야키니쿠 · 와규 · 무한리필</div></div><div class="tags"><span class="tag key">리뷰 5천+</span></div></div></article>
+<article class="card foodcard fooditem noimg verified-text" data-kind="meat"><div class="body"><div class="kicker">우메다 · 야키니쿠</div><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Aburiya+Umeda+Osaka" target="_blank" rel="noopener noreferrer">아부리야 우메다 <span class="out">↗</span></a><div class="desc"><b>Google ★4.4 · 1,283</b></div><div class="editorial"><div class="why">리뷰 표본 큰 야키니쿠 후보. 소스가 짜다는 후기가 있어 사용자 취향상 LAB보다 후순위.</div><div class="menu">야키니쿠 · 고기/채소</div></div></div></article>
+<article class="card foodcard fooditem noimg verified-text" data-kind="etc"><div class="body"><div class="kicker">LINKS UMEDA · 장어</div><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Unagi-no+Nakasho+Links+Umeda+Osaka" target="_blank" rel="noopener noreferrer">우나기노 나카쇼 LINKS 우메다 <span class="out">↗</span></a><div class="desc"><b>Google ★4.7 · 1,110</b></div><div class="editorial"><div class="why">빈초와 비교할 장어 후보. 오사카역 북쪽 동선에서 접근 쉬움.</div><div class="menu">장어덮밥 · 장어구이</div></div><div class="tags"><span class="tag key">장어 대안</span></div></div></article>
+<article class="card foodcard fooditem noimg verified-text" data-kind="sushi"><div class="body"><div class="kicker">신사이바시·난바 · 숙성 스시 · 고가</div><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Jukusei+Sushi+Rita+Namba+Shinsaibashi+Osaka" target="_blank" rel="noopener noreferrer">숙성스시 RITA <span class="out">↗</span></a><div class="desc"><b>Google ★4.9 · 1,028</b></div><div class="editorial"><div class="why">메인 스시를 제대로 먹고 싶을 때 보는 고급 후보. 숙성 생선 오마카세.</div><div class="menu">숙성 스시 · 오마카세</div></div><div class="tags"><span class="tag key">고급 스시</span></div></div></article>
 </div></section>
 
 <section id="cafe" class="section"><div class="head"><h2>카페 · 디저트</h2></div>
 <div class="section-label">일정에 넣기 좋은 곳</div>
+<div class="section-label">Google 리뷰 많은 후보</div><div class="grid cafe-grid">
+<div class="card simple"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=COLONY+by+EQI+Shinsaibashi+Amemura+Osaka" target="_blank" rel="noopener noreferrer">COLONY by EQI <span class="out">↗</span></a><div class="mini-meta"><b>Google ★4.8 · 4,985</b></div><div class="cafe-kind">신사이바시·아메무라 · 수플레 팬케이크</div><div class="reason">리뷰 수 최상급. 디저트+브런치 둘 다 가능.</div></div>
+<div class="card simple"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=LiLo+Coffee+Roasters+Osaka" target="_blank" rel="noopener noreferrer">LiLo Coffee Roasters <span class="out">↗</span></a><div class="mini-meta"><b>Google ★4.8 · 2,462</b></div><div class="cafe-kind">아메리카무라 · 스페셜티 커피</div><div class="reason">커피 자체를 중요하게 볼 때 강한 선택.</div></div>
+<div class="card simple"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Blue+Bottle+Coffee+Umeda+Chayamachi+Osaka" target="_blank" rel="noopener noreferrer">Blue Bottle 우메다 차야마치 <span class="out">↗</span></a><div class="mini-meta"><b>Google ★4.3 · 1,157</b></div><div class="cafe-kind">Alpen 근처 · 커피</div><div class="reason">Alpen 전후 쉬기 가장 편한 대형 표본 후보.</div></div>
+<div class="card simple"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=Cafe+LA+Shinsaibashi+Osaka" target="_blank" rel="noopener noreferrer">Cafe LA <span class="out">↗</span></a><div class="mini-meta"><b>Google ★4.8 · 990+</b></div><div class="cafe-kind">신사이바시·난바 중간 · 커피</div><div class="reason">늦게까지 열어 일정 빈틈에 넣기 쉬움.</div></div>
+</div>
 <div class="grid cafe-grid">
 <div class="card simple"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=%E6%9E%9C%E5%AE%9F%E3%83%8E%E8%8F%AF+%E5%BF%83%E6%96%8E%E6%A9%8B+Osaka" target="_blank" rel="noopener noreferrer">카지츠노하나 <span class="out">↗</span></a><div class="mini-meta">과일 디저트 · 생과일 다이후쿠</div><div class="reason">아메무라 지날 때 가볍게</div></div>
 <div class="card simple"><a class="place-link" href="https://www.google.com/maps/search/?api=1&query=%E9%A4%85%E5%8C%A0%E3%81%97%E3%81%A5%E3%81%8F+%E6%96%B0%E7%94%BA+Osaka" target="_blank" rel="noopener noreferrer">모치쇼 시즈쿠 <span class="out">↗</span></a><div class="mini-meta">화과자 · 고급 모찌</div><div class="reason">호리에에서 일본다운 디저트</div></div>
