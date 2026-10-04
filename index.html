@@ -141,6 +141,9 @@ body{background:var(--bg)}
 .card-thumb{width:104px;height:100%;min-height:104px;object-fit:cover;display:block;background:#ece9e1}
 .brand-logo{width:104px;height:100%;min-height:92px;object-fit:contain;padding:22px;background:#fff}
 @media(max-width:380px){.foodcard.has-thumb,.cafecard.has-thumb,#drink .card.has-thumb,.shopcard.has-logo{grid-template-columns:minmax(0,1fr) 92px}.card-thumb,.brand-logo{width:92px}}
+
+/* schedule-first refresh */
+#schedule{margin-top:8px}#schedule>.head h2{font-size:25px}.day{border-radius:20px}.dayhead{padding-bottom:13px}.daypurpose{font-size:11px;line-height:1.45}.timeline .row{grid-template-columns:58px 1fr;padding:14px 0}.timeline .row>div:nth-child(2)>b{font-size:14.5px}.timeline .row p{font-size:11.5px}.timeline .brandline{margin-top:5px}.timeline .slotchoices{margin-top:7px}.timeline .slotchoice{padding:4px 0}.timeline .slotchoice a{font-size:12.5px}.timeline .slotchoice p{font-size:10.5px!important}.daypanel .whybadge{background:var(--olive-dark)}
 </style></head><body><div class="wrap">
 <header class="hero hero-cover"><div class="hero-copy"><div class="eyebrow">OSAKA · 2026</div><h1>오사카<br><span>3박 4일 일정</span></h1><p>10.4 SUN — 10.7 WED · 신사이바시</p></div><div class="hero-photo" role="img" aria-label="오사카성"></div><div class="hero-credit">Osaka Castle · CC BY-SA 4.0</div></header>
 
@@ -149,7 +152,7 @@ body{background:var(--bg)}
 <button class="chip on" data-day="d1">10/4 일</button><button class="chip" data-day="d2">10/5 월</button><button class="chip" data-day="d3">10/6 화</button><button class="chip" data-day="d4">10/7 수</button>
 </div><div class="weatherline" id="weatherline"><b>10/4 · 흐린 뒤 비</b><span>21° / 19° · 비 60% · <a href="https://weather.yahoo.co.jp/weather/27/6200/27128.html">예보 ↗</a></span></div>
 
-<div class="card day daypanel" id="d1"><div class="dayhead"><div><small>10/4 일 · 도착 · 비</small><h3>도착 → 신사이바시 실내 쇼핑 → 저녁</h3><div class="daypurpose">비 최소 동선 · PARCO/다이마루 중심 · 도톤보리는 비 약할 때</div></div></div><div class="timeline">
+<div class="card day daypanel" id="d1"><div class="dayhead"><div><small>10/4 일 · 완료</small><h3>도착 → PARCO/다이마루 → 돈키 → 난바</h3><div class="daypurpose">실제 일정 기록 · 철판요리 / 쇼핑 / 쿠시카츠까지 완료</div></div></div><div class="timeline">
 <div class="row"><div class="time">13:10</div><div><b>간사이공항 도착</b><p>입국 · 수하물 수령</p></div></div>
 <div class="row"><div class="time">14:10~</div><div><b>간사이공항 → 난바</b><p>난카이 라피트 또는 공항급행</p><div class="move">열차 약 35~45분</div></div></div>
 <div class="row"><div class="time">15:10쯤</div><div><b>난바 → 아라시 호텔 신사이바시 No.002</b><p>히가시신사이바시 1-16-5</p><div class="move">기본: 미도스지선 난바→신사이바시 1정거장 + 도보 · 캐리어가 크거나 비 오면 택시</div></div></div>
@@ -165,47 +168,33 @@ body{background:var(--bg)}
 <div class="row"><div class="time">22:30</div><div><b>숙소 복귀</b></div></div></div>
 <div class="nearby"><div class="nearby-title">20:00 · 도톤보리·호젠지에서 출출하면</div><div class="pick"><div class="pick-main"><a href="https://www.google.com/maps/search/?api=1&query=%E3%81%9F%E3%81%93%E7%84%BC%E9%81%93%E6%A5%BD+%E3%82%8F%E3%81%AA%E3%81%8B+%E5%8D%83%E6%97%A5%E5%89%8D%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener noreferrer">타코야키 와나카 ↗</a><p>오사카 대표 타코야키 · Tabelog 3.49 / 3,197</p></div><span class="dist">난바</span></div><div class="pick"><div class="pick-main"><a href="https://www.google.com/maps/search/?api=1&query=%E6%B3%95%E5%96%84%E5%AF%BA+%E4%B8%89%E5%B9%B3+%E5%A4%A7%E9%98%AA" target="_blank" rel="noopener noreferrer">호젠지 산페이 ↗</a><p>오코노미야키 · 호젠지요코초에서 바로</p></div><span class="dist">호젠지</span></div></div></div>
 
-<div class="card day daypanel hidden" id="d2"><div class="dayhead"><div><small>10/5 월 · 쇼핑</small><h3>신사이바시 → 아메리카무라 → 호리에</h3></div></div><div class="timeline">
-<div class="row"><div class="time">08:00</div><div><b>기상 · 가벼운 아침</b><p><a class="place-link inline-place" href="https://www.google.com/maps/search/?api=1&query=Komeda%27s+Coffee+Higashishinsaibashi+Osaka" target="_blank" rel="noopener noreferrer">코메다커피 히가시신사이바시 ↗</a> 토스트·커피 또는 편의점 오니기리·샌드위치. 쇼핑 시작 전 과식하지 않기.</p></div></div>
-<div class="row"><div class="time">09:40</div><div><b>숙소 출발 → 신사이바시 PARCO</b><div class="move">도보 약 5~7분</div></div></div>
-<div class="row"><div class="time">10:00</div><div><b>신사이바시 PARCO</b><p>2F 중심 쇼핑</p><div class="routebox"><b>HOMME PLISSÉ · HUMAN MADE</b><div class="shop-tier"><strong>같이 보기</strong><span>Goldwin — 깔끔한 기능성 일상복</span><span>On — 러닝화·운동복, 가격/컬러 메리트 확인</span><span>STUDIO NICHOLSON — 미니멀한 실루엣 취향</span></div><div class="shop-tier soft"><strong>시간 남으면</strong><span>kolor — 디자인 강한 일본 디자이너 브랜드</span><span>Onitsuka Tiger — 일본 제품·컬러 아이쇼핑</span></div></div></div></div>
-<div class="row"><div class="time">11:30</div><div><b>다이마루 신사이바시 본관</b><p>포켓몬센터 오사카 DX</p><div class="brandline">Pokémon Center Osaka DX</div><div class="move">PARCO 바로 인접</div></div></div>
-<div class="row"><div class="time">12:30</div><div><b>점심</b><div class="slotchoices">
-<div class="slotchoice reco"><a href="https://www.google.com/maps/search/?api=1&query=Gyukatsu+Kyoto+Katsugyu+Honmachi+Shinsaibashi" target="_blank" rel="noopener noreferrer">카츠규 ↗</a><p>규카츠 · 신사이바시</p><span class="whybadge">추천</span></div>
-<div class="slotchoice"><a href="https://www.google.com/maps/search/?api=1&query=Ikareta+Noodle+Fishtons+Osaka" target="_blank" rel="noopener noreferrer">피시톤즈 ↗</a><p>면 · 호리에 방향</p></div>
-<div class="slotchoice"><a href="https://www.google.com/maps/search/?api=1&query=Sushi+Sakaba+Sashisu+Namba+Walk+Osaka" target="_blank" rel="noopener noreferrer">사시스 ↗</a><p>스시·술 · 난바 방향</p></div>
+<div class="card day daypanel hidden" id="d2"><div class="dayhead"><div><small>10/5 월 · 우메다 · 비</small><h3>맛있는 하루 + 우메다 실내 쇼핑</h3><div class="daypurpose">아점 → 한큐 MEN'S → 디저트 → Alpen → 점저 → 숙소 휴식 → 로바타야키</div></div></div><div class="timeline">
+<div class="row"><div class="time">09:30</div><div><b>기상 · 발목 컨디션 체크</b><p>오늘은 비 + 실내 중심. 오래 걷기보다 목적지 단위로 이동.</p></div></div>
+<div class="row"><div class="time">10:20</div><div><b>숙소 → 우메다</b><div class="move">신사이바시역 → 우메다역 · 미도스지선</div></div></div>
+<div class="row"><div class="time">11:00</div><div><b>아점 ★</b><div class="slotchoices">
+<div class="slotchoice reco"><a href="#food">스시 / 평일 런치 후보 보기</a><p>이번 여행 메인 스시를 5일·6일 중 더 좋은 곳으로 선택</p><span class="whybadge">음식 우선</span></div>
+<div class="slotchoice"><a href="#food">고급 평일 런치</a><p>저녁 대비 가격 메리트 큰 일식·야키니쿠·철판 등은 보너스 후보</p></div>
 </div></div></div>
-<div class="row"><div class="time">13:30</div><div><b>미도스지 → 아메리카무라</b><div class="brandline"><a href="https://www.google.com/maps/search/?api=1&query=UNIQLO+SHINSAIBASHI+Osaka" target="_blank" rel="noopener noreferrer">UNIQLO ↗</a> · <a href="https://www.google.com/maps/search/?api=1&query=lululemon+Midosuji+Osaka" target="_blank" rel="noopener noreferrer">lululemon ↗</a> · Supreme</div><p>신사이바시 중심에서 남쪽으로 훑고 아메리카무라로 이동</p></div></div>
-<div class="row"><div class="time">15:00</div><div><b>호리에</b><div class="brandline"><a href="https://www.google.com/maps/search/?api=1&query=Maison+MIHARA+YASUHIRO+Osaka" target="_blank" rel="noopener noreferrer">MIHARA YASUHIRO ↗</a> · KINDAL</div><p>아메리카무라에서 서쪽으로 이동 · 미하라 오사카점 포함</p></div></div>
-<div class="row"><div class="time">15:30</div><div><b>카페 · 디저트</b><div class="slotchoices">
-<div class="slotchoice reco"><a href="https://www.google.com/maps/search/?api=1&query=%E9%A4%85%E5%8C%A0%E3%81%97%E3%81%A5%E3%81%8F+%E6%96%B0%E7%94%BA+Osaka" target="_blank" rel="noopener noreferrer">모치쇼 시즈쿠 ↗</a><p>화과자</p><span class="whybadge">추천</span></div>
-<div class="slotchoice"><a href="https://www.google.com/maps/search/?api=1&query=LE+PINEAU+Kitahorie+Osaka" target="_blank" rel="noopener noreferrer">르 피노 ↗</a><p>케이크</p></div>
-<div class="slotchoice"><a href="https://www.google.com/maps/search/?api=1&query=MONDIAL+KAFFEE+328+NY3+Osaka" target="_blank" rel="noopener noreferrer">몽디알 ↗</a><p>커피</p></div>
-</div></div></div>
-<div class="row"><div class="time">17:00</div><div><b>아라시 호텔로 복귀</b><p>쇼핑백 내려놓고 1시간 휴식</p><div class="move">호리에/요츠바시권 → 숙소 도보 약 15분 전후</div></div></div>
-<div class="row"><div class="time">18:30</div><div><b>숙소 출발</b></div></div>
-<div class="row"><div class="time">19:00</div><div><b>저녁</b><div class="slotchoices">
-<div class="slotchoice reco"><a href="https://www.google.com/maps/search/?api=1&query=%E5%B0%BD%E8%AA%A0+%E5%BF%83%E6%96%8E%E6%A9%8B+Osaka" target="_blank" rel="noopener noreferrer">진세이 ↗</a><p>에도마에 스시 · 예약 우선</p><span class="whybadge">추천</span></div>
-<div class="slotchoice"><a href="https://www.google.com/maps/search/?api=1&query=Sushi+Sakaba+Sashisu+Namba+Walk+Osaka" target="_blank" rel="noopener noreferrer">사시스 ↗</a><p>스시·술 · 캐주얼</p></div>
-<div class="slotchoice"><a href="https://www.google.com/maps/search/?api=1&query=Yakitori+Bonzo+Shinsaibashi+Osaka" target="_blank" rel="noopener noreferrer">본조 ↗</a><p>야키토리 · 숙소 도보권</p></div>
-</div></div></div>
-<div class="row"><div class="time">21:00</div><div><b>한잔 또는 숙소</b><p>컨디션 따라 주류 탭에서 가까운 곳 선택</p></div></div></div>
-</div>
+<div class="row"><div class="time">12:30</div><div><b>Hankyu MEN'S Osaka ★</b><div class="brandline">HOMME PLISSÉ → AURALEE · COMOLI → CELINE/PRADA는 가볍게</div><p>옴플은 오늘 PARCO에서 확인한 제품과 재고 비교. Guest Coupon 5% 적용 여부를 결제 전에 확인하고 면세까지.</p><div class="move">우메다역권 · 실내/지하 연결 우선</div></div></div>
+<div class="row"><div class="time">13:30</div><div><b>한큐 본점 · 필요한 것만</b><p>백화점 전체 순회 금지. 관심 제품/할인 대상만 빠르게 확인.</p></div></div>
+<div class="row"><div class="time">14:30</div><div><b>디저트 카페 ★</b><p>하루 1곳. 파르페·푸딩·케이크 등 디저트 자체가 목적이 되는 곳 우선.</p><div class="slotchoices"><div class="slotchoice reco"><a href="#cafe">우메다 디저트 후보 보기</a><p>쇼핑 휴게가 아니라 여행 일정으로 45~60분</p><span class="whybadge">필수</span></div></div></div></div>
+<div class="row"><div class="time">15:40</div><div><b>Alpen OSAKA ★</b><div class="brandline">Goldwin · THE NORTH FACE · ASICS · On</div><p>Goldwin 패딩 / 아내분 노페 패딩 우선. ASICS NOVABLAST·SUPERBLAST와 On 착화·가격 비교. 골프·캠핑은 재미로.</p></div></div>
+<div class="row"><div class="time">17:10</div><div><b>가챠 · LUCUA</b><p>가챠는 우메다역권에서 짧게. LUCUA는 <b>lululemon</b> 필수. Alpen에서 신발을 봤으면 스포츠 매장 반복은 생략.</p></div></div>
+<div class="row"><div class="time">17:50</div><div><b>점저 ★ 장어</b><p>우나기/히츠마부시 필수 슬롯. 너무 무겁게 먹지 않고 밤 로바타 여유 남기기.</p></div></div>
+<div class="row"><div class="time">19:00</div><div><b>숙소 복귀 · 1~1.5시간 휴식</b><p>쇼핑백 내려놓고 발목 쉬기.</p><div class="move">우메다 → 신사이바시</div></div></div>
+<div class="row"><div class="time">21:00</div><div><b>로바타야키 ★</b><p>신사이바시·난바권. 해산물·생선·채소·고기를 조금씩. 오늘 쿠시카츠와 겹치는 튀김 중심은 제외.</p><div class="slotchoices"><div class="slotchoice reco"><a href="#drink">로바타·이자카야 후보 보기</a><p>자리/컨디션 보고 선택</p><span class="whybadge">필수</span></div></div></div></div>
+</div></div>
 
-<div class="card day daypanel hidden" id="d3"><div class="dayhead"><div><small>10/6 화 · 선택 일정</small><h3>교토 또는 우메다 → 신사이바시</h3></div></div><div class="timeline">
-<div class="row"><div class="time">08:00</div><div><b>기상 · 준비</b></div></div>
-<div class="row"><div class="time">09:00</div><div><b>A 교토 / B 우메다 출발</b><p>이 날만 목적지 확정 후 시간표를 세분화</p></div></div>
-<div class="row"><div class="time">17:00쯤</div><div><b>아라시 호텔 복귀</b><p>짐 내려놓고 휴식</p></div></div>
-<div class="row"><div class="time">19:00</div><div><b>신사이바시 저녁 · 주류</b></div></div>
-<div class="row"><div class="time">21:00</div><div><b>돈키호테 도톤보리</b><p>마지막 밤 쇼핑</p><div class="move">도톤보리 → 숙소 도보권</div></div></div>
-<div class="row"><div class="time">22:30</div><div><b>숙소 복귀 · 패킹</b></div></div></div><div class="nearby"><div class="nearby-title">10/6 · 교토를 고르면</div>
-<div class="pick"><div class="pick-main"><a href="https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E7%A5%87%E5%9C%92+%E3%81%8A%E3%81%8B%E3%82%8B" target="_blank" rel="noopener noreferrer">기온 오카루 ↗</a><p>우동·소바 · Tabelog 3.59 / 1,411 · 기온시조역 218m</p></div><span class="dist">가벼운 점심</span></div>
-<div class="pick"><div class="pick-main"><a href="https://www.google.com/maps/search/?api=1&query=%E7%A5%87%E5%9C%92+%E9%AE%A8%E3%81%BE%E3%81%A4%E3%82%82%E3%81%A8" target="_blank" rel="noopener noreferrer">스시 마츠모토 ↗</a><p>에도마에 · 2025 스시 WEST 100선 · 3.75 / 311</p></div><span class="dist">기온시조 229m</span></div>
-<div class="pick"><div class="pick-main"><a href="https://www.google.com/maps/search/?api=1&query=%E7%A5%87%E5%9C%92%E8%82%89%E4%BA%AD+%E6%96%B0" target="_blank" rel="noopener noreferrer">기온 니쿠테이 신 ↗</a><p>100년 마치야 · 소고기 일식 · 런치 가능</p></div><span class="dist">기온시조 293m</span></div>
-</div>
-<div class="nearby"><div class="nearby-title">10/6 · 우메다를 고르면</div>
-<div class="pick"><div class="pick-main"><a href="https://www.google.com/maps/search/?api=1&query=%E5%AF%BF%E5%8F%B8%E9%85%92%E5%A0%B4%20%E3%81%A6%E3%81%A3%E3%81%BA%E3%81%84%20%E6%A2%85%E7%94%B0" target="_blank" rel="noopener noreferrer">스시 사카바 텟페이 ↗</a><p>스시·해산물 이자카야 · 3.52 / 744</p></div><span class="dist">히가시우메다 297m</span></div>
-<div class="pick"><div class="pick-main"><a href="https://www.google.com/maps/search/?api=1&query=%E7%84%BC%E8%82%89%E3%81%94%E3%82%8A%E3%81%A1%E3%82%83%E3%82%93%20%E6%A2%85%E7%94%B0" target="_blank" rel="noopener noreferrer">야키니쿠 후지모토 ↗</a><p>2025 야키니쿠 WEST 100선 · 3.61 / 553</p></div><span class="dist">히가시우메다 168m</span></div>
+<div class="card day daypanel hidden" id="d3"><div class="dayhead"><div><small>10/6 화 · 남쪽 동선</small><h3>신사이바시 → 미나미센바 → 호리에 → 난바</h3><div class="daypurpose">필수 매장만 연결 · 아점/디저트/점저/이자카야 3끼 리듬 유지</div></div></div><div class="timeline">
+<div class="row"><div class="time">09:30</div><div><b>기상 · 여유 있게 시작</b></div></div>
+<div class="row"><div class="time">10:30</div><div><b>아점 ★</b><p>라멘을 이 슬롯에 넣기 좋음. 단, 평일 런치 메리트가 큰 고급집이 발견되면 교체 가능.</p><div class="slotchoices"><div class="slotchoice reco"><a href="#food">라멘·런치 후보 보기</a><p>짠맛 강한 곳은 후순위</p><span class="whybadge">후보</span></div></div></div></div>
+<div class="row"><div class="time">11:30</div><div><b>신사이바시 · 미나미센바</b><div class="brandline">FREITAG · UNIQLO SHINSAIBASHI · GU · HUMAN MADE 추가 구매</div><p>UNIQLO/GU는 우메다에서 보지 않고 신사이바시에서. HUMAN MADE는 티셔츠 1장 추가 후보.</p></div></div>
+<div class="row"><div class="time">13:00</div><div><b>호리에 핵심만</b><div class="brandline">Maison MIHARA YASUHIRO 공식점 · Supreme · LHP</div><p>Orange Street 전체 순회는 생략. 미하라 공식점 우선, 편집숍은 발견용으로 짧게.</p></div></div>
+<div class="row"><div class="time">14:30</div><div><b>디저트 카페 ★</b><p>5일과 다른 종류로. 화과자·푸딩·케이크·스페셜티 커피 중 하나.</p><div class="slotchoices"><div class="slotchoice reco"><a href="#cafe">호리에·신사이바시 카페 후보 보기</a><p>하루 한 곳은 확실하게</p><span class="whybadge">필수</span></div></div></div></div>
+<div class="row"><div class="time">15:40</div><div><b>난바 · 필요한 것만</b><p>다카시마야 할인 대상 확인 · Pokémon/POP MART는 관심 유지. <b>중고 카드숍은 가지 않음.</b> CELINE을 전날 못 봤으면 이 구간에서 가볍게.</p></div></div>
+<div class="row"><div class="time">17:00</div><div><b>점저 ★ 자유식</b><p>스시가 5일에 안 들어갔다면 이 슬롯을 메인 스시로 승격. 아니면 소바·우동·돈카츠·야키니쿠 등 그날 가장 맛있어 보이는 곳.</p></div></div>
+<div class="row"><div class="time">18:30</div><div><b>숙소 복귀 · 휴식</b><p>1시간 이상 쉬고 밤 일정.</p></div></div>
+<div class="row"><div class="time">20:30</div><div><b>일반 이자카야 ★</b><p>사시미·구이·조림·계란말이 등 메뉴 폭 넓고 사케 좋은 곳. 전문 야키토리/쿠시카츠보다는 일반 이자카야 우선.</p><div class="slotchoices"><div class="slotchoice reco"><a href="#drink">이자카야 후보 보기</a><p>Google 평점·리뷰 수 우선</p><span class="whybadge">필수</span></div></div></div></div>
 </div></div>
 
 <div class="card day daypanel hidden" id="d4"><div class="dayhead"><div><small>10/7 수 · 출국</small><h3>마지막 쇼핑 → 간사이공항</h3></div></div><div class="timeline">
