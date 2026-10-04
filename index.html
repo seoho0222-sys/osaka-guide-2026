@@ -441,7 +441,7 @@ function updateCuisine(){
    if(sort==='recommended'){
      // Rating is primary; review sample improves confidence without overwhelming rating.
      // 4.5/1000 reviews should outrank a 4.2/10000-review venue.
-     const score=d=>Number(d.rating||0)+Math.min(0.12,Math.log10(Math.max(1,Number(d.reviews||0))/300)*0.065);
+     const score=d=>Number(d.rating||0)+Math.min(0.07,Math.log10(Math.max(1,Number(d.reviews||0))/300)*0.04);
      return score(y)-score(x)||Number(y.reviews||0)-Number(x.reviews||0);
    }
    const k=sort==='rating'?'rating':'reviews';
