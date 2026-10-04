@@ -213,6 +213,9 @@ body,.wrap{background:#F7F9FC!important;color:#202C3A!important}
 .shop-check input{width:17px;height:17px;accent-color:#263F59}
 html{scroll-padding-top:12px}
 @media(max-width:420px){.wrap{padding-left:13px;padding-right:13px}.daychips{margin-left:-13px;margin-right:-13px}.dayhead h3{font-size:17px}.timeline .row{grid-template-columns:49px minmax(0,1fr)}}
+.venue-photo-link{display:inline-flex;font-size:11px;font-weight:750;color:#405872;margin:7px 0 1px;padding:5px 0;text-decoration:underline;text-underline-offset:3px}
+#food .directory-card .venue-photo-link{margin-top:5px}
+.restaurant-tools{scroll-margin-top:20px}
 </style></head><body><div class="wrap">
 <header class="hero hero-cover"><div class="hero-copy"><div class="eyebrow">OSAKA · 2026</div><h1>오사카<br><span>3박 4일 일정</span></h1><p>10.4 SUN — 10.7 WED · 신사이바시</p></div><div class="hero-photo" role="img" aria-label="오사카성"></div><div class="hero-credit">Osaka Castle · CC BY-SA 4.0</div></header>
 
@@ -362,12 +365,13 @@ function updateCuisine(){
  let total=0;
  document.querySelectorAll('#food .area-group').forEach(g=>{
   const entries=[...g.querySelectorAll('.restaurant-entry')];
+  entries.forEach((el,i)=>{if(!el.dataset.originalOrder)el.dataset.originalOrder=String(i+1)});
   const candidates=entries.filter(el=>{
    const card=el.querySelector('.directory-card');
    return (active==='all'||card?.dataset.kind===active)&&(!query||el.textContent.toLocaleLowerCase().includes(query));
   });
   const ordered=[...candidates].sort((a,b)=>{
-    if(sort==='recommended')return 0;
+    if(sort==='recommended')return Number(a.dataset.originalOrder)-Number(b.dataset.originalOrder);
     const x=a.querySelector('.directory-card')?.dataset,y=b.querySelector('.directory-card')?.dataset;
     return Number(y?.[sort==='rating'?'rating':'reviews']||0)-Number(x?.[sort==='rating'?'rating':'reviews']||0);
   });
@@ -417,5 +421,20 @@ const updateDaybar=()=>{
  daybar.classList.toggle('context-off',!inSchedule);
 };
 window.addEventListener('scroll',updateDaybar,{passive:true}); updateDaybar();
+
+// Only use each venue's own Maps listing for its photos; never reuse generic photos.
+document.querySelectorAll('#food .directory-card,#cafe .card,#drink .card').forEach(card=>{
+ const link=card.querySelector('a.place-link[href*="google.com/maps"]');
+ if(!link||card.querySelector('.photo-access'))return;
+ const a=document.createElement('a');a.className='venue-photo-link';a.href=link.href;a.target='_blank';a.rel='noopener noreferrer';
+ a.textContent='매장 사진 ↗';a.setAttribute('aria-label',link.textContent.trim()+' 실제 사진 확인');
+ card.appendChild(a);
+});
+// Shop visit marks persist only on the current device.
+document.querySelectorAll('.shop-check input').forEach((box,i)=>{
+ const key='osaka-shop-visited-'+i;
+ try{box.checked=localStorage.getItem(key)==='1'}catch(e){}
+ box.addEventListener('change',()=>{try{localStorage.setItem(key,box.checked?'1':'0')}catch(e){}});
+});
 </script><!-- Food illustrations are category examples, not merchant photography. Credits: Japanese Sushi platter (Luvpixy, CC BY-SA 4.0); Hitsumabushi by Joi (Joi, CC BY 2.0); Souffe pancakes (76651) (Rhododendrites, CC BY-SA 4.0); A bowl of ramen in Osaka (Joli Rumi, Wikimedia Commons). -->
 </body></html>
