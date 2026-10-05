@@ -615,10 +615,10 @@ document.querySelectorAll('.shop-check input').forEach((box,i)=>{
  document.querySelectorAll('#food .area-group').forEach(group=>group.querySelectorAll('.directory-card').forEach(card=>{
   const raw=card.querySelector('.kicker')?.textContent.trim()||'';
   const menu=card.querySelector('.directory-menu'),menuText=menu?.textContent.trim()||'';
-  const price=(raw+' '+menuText).match(/¥[\\d,]+(?:\\s*[~～-]\\s*¥?[\\d,]+)?/);
+  const price=(raw+' '+menuText).match(/¥[\d,]+(?:\s*[~～-]\s*¥?[\d,]+)?/);
   const tokens=[labels[card.dataset.kind],...raw.split('·'),...menuText.split('·')]
-    .map(x=>x.trim()).filter(x=>x&&!x.includes('¥')&&!/\\d+(?:F|층|분|시|점)$/.test(x));
-  const unique=[...new Set(tokens)].filter(t=>!tokens.some(other=>other!==t&&other.replace(/\\s/g,'').includes(t.replace(/\\s/g,'')))) ;
+    .map(x=>x.trim()).filter(x=>x&&!x.includes('¥')&&!/\d+(?:F|층|분|시|점)$/.test(x));
+  const unique=[...new Set(tokens)].filter(t=>!tokens.some(other=>other!==t&&other.replace(/\s/g,'').includes(t.replace(/\s/g,'')))) ;
   const category=unique.filter(t=>!/(신사이바시|난바|우메다|도톤보리|PARCO|오사카역|차야마치|호리에|그랜드|한큐|LUCUA)/i.test(t)).slice(0,3);
   const kicker=card.querySelector('.kicker');
   if(kicker){kicker.textContent='';const place=document.createElement('span');place.className='directory-area-badge';place.textContent=places[group.dataset.area]||'';kicker.append(place,document.createTextNode(category.join(' · ')));}
