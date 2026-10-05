@@ -402,6 +402,10 @@ b,strong,.brandline,.row b,.time,.kicker,.place-link,.priority,.nearby-title,.se
 #schedule .mall-brand-content strong{display:block;font-weight:600}
 #schedule .mall-brand-content span{display:block;color:#8090A0;margin-top:3px}
 #schedule .mall-brands[open]{display:block;margin:7px 0 0}
+
+#food .directory-card.has-verified-photo{grid-template-columns:minmax(0,1fr) 94px!important;grid-template-rows:repeat(3,auto) 1fr auto!important;column-gap:9px!important;}
+#food .directory-card.has-verified-photo .directory-photo{grid-column:2!important;grid-row:1/span 4!important;cursor:pointer;max-width:94px;max-height:94px;object-fit:cover}
+#food .directory-photo-credit{grid-column:2!important;grid-row:5!important;display:block;font-size:8px;line-height:1.35;color:#8997A6;margin-top:5px;text-decoration:underline;text-underline-offset:2px}
 </style></head><body><div class="wrap">
 <header class="hero hero-cover"><div class="hero-copy"><h1>오사카</h1><p>10/4(일)~7(수) · 3박 4일</p></div><div class="hero-photo" role="img" aria-label="오사카성"></div><div class="hero-credit">Osaka Castle · CC BY-SA 4.0</div></header>
 
@@ -662,12 +666,15 @@ document.querySelectorAll('.shop-check input').forEach((box,i)=>{
 })();
 
 /* Approved venue-specific imagery only. Keep empty until image owner/license and venue verified. */
-const verifiedVenuePhotos={};
+const verifiedVenuePhotos={
+ '스시로 도톤보리점':{url:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Sushiro---2025-09-18_008.jpg?width=360',credit:'RuinDig / Yuki Uchida · CC BY 4.0 · 브랜드 음식 사진 (해당 지점 촬영 아님)',source:'https://commons.wikimedia.org/wiki/File:Sushiro---2025-09-18_008.jpg',license:'https://creativecommons.org/licenses/by/4.0/'},
+ '잇푸도 난바':{url:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Hakata_Ippudo_Ramen_20180622.jpg?width=360',credit:'Wikimedia Commons 사진 작가 · CC BY-SA 4.0 · 브랜드 음식 사진 (해당 지점 촬영 아님)',source:'https://commons.wikimedia.org/wiki/File:Hakata_Ippudo_Ramen_20180622.jpg',license:'https://creativecommons.org/licenses/by-sa/4.0/'}
+};
 document.querySelectorAll('#food .directory-card').forEach(card=>{
  const link=card.querySelector('a.place-link[href]');if(!link)return;
- const key=link.href;const photo=verifiedVenuePhotos[key];if(!photo?.url||!photo?.credit)return;
- const img=document.createElement('img');img.className='directory-photo';img.src=photo.url;img.alt=link.textContent.trim()+' 음식 사진';img.loading='lazy';img.referrerPolicy='no-referrer';img.title=photo.credit;
- img.onerror=()=>{img.remove();card.classList.remove('has-verified-photo')};card.classList.add('has-verified-photo');card.appendChild(img);
+ const key=link.textContent.replace(/↗/g,'').trim();const photo=verifiedVenuePhotos[key];if(!photo?.url||!photo?.credit)return;
+ const img=document.createElement('img');img.className='directory-photo';img.src=photo.url;img.alt=link.textContent.trim()+' 음식 사진';img.loading='lazy';img.referrerPolicy='no-referrer';img.title=photo.credit;img.addEventListener('click',()=>window.open(link.href,'_blank','noopener'));
+ img.onerror=()=>{img.remove();card.classList.remove('has-verified-photo')};card.classList.add('has-verified-photo');card.appendChild(img);const attribution=document.createElement('a');attribution.className='directory-photo-credit';attribution.href=photo.source;attribution.target='_blank';attribution.rel='noopener noreferrer';attribution.textContent='브랜드 음식 사진 · 출처/저작권 ↗';attribution.title=photo.credit+' · '+photo.license;card.appendChild(attribution);
 });
 </script><!-- Food illustrations are category examples, not merchant photography. Credits: Japanese Sushi platter (Luvpixy, CC BY-SA 4.0); Hitsumabushi by Joi (Joi, CC BY 2.0); Souffe pancakes (76651) (Rhododendrites, CC BY-SA 4.0); A bowl of ramen in Osaka (Joli Rumi, Wikimedia Commons). -->
 </body></html>
