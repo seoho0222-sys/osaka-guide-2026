@@ -382,15 +382,22 @@ b,strong,.brandline,.row b,.time,.kicker,.place-link,.priority,.nearby-title,.se
 #food .directory-card.has-verified-photo{display:grid!important;grid-template-columns:minmax(0,1fr) 92px!important;column-gap:10px!important;align-items:start!important}
 #food .directory-card.has-verified-photo>.directory-photo{grid-column:2;grid-row:1 / span 4;width:92px;height:92px;object-fit:cover;border-radius:9px;background:#EDF1F5}
 #food .directory-card.has-verified-photo>.kicker,#food .directory-card.has-verified-photo>.place-link,#food .directory-card.has-verified-photo>.directory-score,#food .directory-card.has-verified-photo>.venue-photo-link{grid-column:1;min-width:0}
+
+/* Compact day/date hierarchy: prominent date on same baseline as region */
+#schedule .dayhead>div:first-child{display:flex!important;align-items:baseline!important;gap:13px!important;flex-wrap:wrap!important;width:100%}
+#schedule .dayhead small{font-size:19px!important;font-weight:650!important;color:#283F59!important;white-space:nowrap;letter-spacing:-.035em!important}
+#schedule .dayhead h3{font-size:19px!important;font-weight:600!important;margin:0!important;line-height:1.45!important}
+#schedule .dayhead .routebox{flex-basis:100%}
+#schedule .dayhead{padding-bottom:12px!important}
 </style></head><body><div class="wrap">
 <header class="hero hero-cover"><div class="hero-copy"><h1>오사카</h1><p>10/4(일)~7(수) · 3박 4일</p></div><div class="hero-photo" role="img" aria-label="오사카성"></div><div class="hero-credit">Osaka Castle · CC BY-SA 4.0</div></header>
 
 <section id="schedule" class="section"><div class="head schedule-heading"><h2>일정 선택</h2></div>
 <div class="scroller daychips">
 <button class="chip on" data-day="d1">10/4 일</button><button class="chip" data-day="d2">10/5 월</button><button class="chip" data-day="d3">10/6 화</button><button class="chip" data-day="d4">10/7 수</button>
-</div><div class="weatherline" id="weatherline"><b>10/4 · 흐린 뒤 비</b><span>21° / 19° · 비 60% · <a href="https://weather.yahoo.co.jp/weather/27/6200/27128.html">예보 ↗</a></span></div>
+</div><div class="weatherline" id="weatherline"><b>10/4 · 흐린 뒤 비</b><span>21° / 19° · 비 60% · <a href="https://www.google.com/search?hl=ko&amp;q=%EC%98%A4%EC%82%AC%EC%B9%B4+%EB%82%A0%EC%94%A8">예보 ↗</a></span></div>
 
-<div class="card day daypanel" id="d1"><div class="dayhead"><div><small>10/4 일 · 완료</small><h3>신사이바시 · 난바</h3><div class="daypurpose">철판요리 · 쇼핑 · 쿠시카츠</div></div></div><div class="timeline">
+<div class="card day daypanel" id="d1"><div class="dayhead"><div><small>10/4(일)</small><h3>신사이바시 · 난바</h3><div class="daypurpose">철판요리 · 쇼핑 · 쿠시카츠</div></div></div><div class="timeline">
 <div class="row"><div class="time">13:10</div><div><b>간사이공항 도착</b><p>입국 · 수하물 수령</p></div></div>
 <div class="row"><div class="time">14:10~</div><div><b>간사이공항 → 난바</b><p>난카이 라피트 또는 공항급행</p><div class="move">열차 약 35~45분</div></div></div>
 <div class="row"><div class="time">15:10쯤</div><div><b>난바 → 아라시 호텔 신사이바시 No.002</b><p>히가시신사이바시 1-16-5</p><div class="move">기본: 미도스지선 난바→신사이바시 1정거장 + 도보 · 캐리어가 크거나 비 오면 택시</div></div></div>
@@ -406,36 +413,36 @@ b,strong,.brandline,.row b,.time,.kicker,.place-link,.priority,.nearby-title,.se
 <div class="row"><div class="time">22:30</div><div><b>숙소 복귀</b></div></div></div>
 <div class="nearby"><div class="nearby-title">20:00 · 도톤보리·호젠지에서 출출하면</div><div class="pick"><div class="pick-main"><a href="https://www.google.com/maps/search/?api=1&query=%E3%81%9F%E3%81%93%E7%84%BC%E9%81%93%E6%A5%BD+%E3%82%8F%E3%81%AA%E3%81%8B+%E5%8D%83%E6%97%A5%E5%89%8D%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener noreferrer">타코야키 와나카 ↗</a><p>오사카 대표 타코야키 · Tabelog 3.49 / 3,197</p></div><span class="dist">난바</span></div><div class="pick"><div class="pick-main"><a href="https://www.google.com/maps/search/?api=1&query=%E6%B3%95%E5%96%84%E5%AF%BA+%E4%B8%89%E5%B9%B3+%E5%A4%A7%E9%98%AA" target="_blank" rel="noopener noreferrer">호젠지 산페이 ↗</a><p>오코노미야키 · 호젠지요코초에서 바로</p></div><span class="dist">호젠지</span></div></div></div>
 
-<div class="card day daypanel hidden" id="d2"><div class="dayhead"><div><small>10/5 월 · 우메다 · 비</small><h3>우메다</h3><div class="daypurpose">아점 → 한큐 MEN'S → 디저트 → Alpen → 점저 → 숙소 휴식 → 로바타야키</div></div></div><div class="timeline">
-<div class="row"><div class="time">09:30</div><div><b>기상 · 발목 컨디션 체크</b><p>오늘은 비 + 실내 중심. 오래 걷기보다 목적지 단위로 이동.</p></div></div>
+<div class="card day daypanel hidden" id="d2"><div class="dayhead"><div><small>10/5(월)</small><h3>우메다</h3><div class="daypurpose">아점 → 한큐 MEN'S → 디저트 → Alpen → 점저 → 숙소 휴식 → 로바타야키</div></div></div><div class="timeline">
+<div class="row"><div class="time">09:30</div><div><b>기상</b></div></div>
 
 <div class="row"><div class="time">10:30</div><div><b>숙소 출발</b><p>아점은 숙소 근처 또는 우메다에서</p></div></div><div class="row"><div class="time">10:45~</div><div><b>아점 · 신사이바시 또는 우메다</b><div class="slotchoices"><div class="slotchoice reco"><a href="#food" data-jump-area="shinsaibashi">① 신사이바시에서 먹고 출발</a><p>숙소 근처에서 식사 후 우메다 이동</p><span class="whybadge">편한 선택</span></div>
 <div class="slotchoice"><a href="#food" data-jump-area="umeda">② 우메다 도착해서 먹기</a><p>바로 이동해 식사 후 한큐 MEN’S</p></div>
 
 </div></div></div>
-<div class="row"><div class="time">11:30 전후</div><div><b>우메다 이동 · 식사 장소에 따라</b><p>숙소 근처에서 먹었다면 식사 후 이동 · 우메다에서 먹는다면 먼저 이동</p></div></div><div class="row"><div class="time">12:30</div><div><b>Hankyu MEN'S Osaka ★</b><div class="brandline">HOMME PLISSÉ → AURALEE · COMOLI → CELINE/PRADA는 가볍게</div><p>옴플은 PARCO에서 봤던 제품과 비교. 매장에서 살펴보기.</p><div class="move">우메다역권 · 실내/지하 연결 우선</div></div></div>
+<div class="row"><div class="time">11:30 전후</div><div><b>우메다 이동 · 식사 장소에 따라</b><p>숙소 근처에서 먹었다면 식사 후 이동 · 우메다에서 먹는다면 먼저 이동</p></div></div><div class="row"><div class="time">12:30</div><div><b>Hankyu MEN'S Osaka ★</b><div class="brandline">HOMME PLISSÉ → AURALEE · COMOLI → CELINE 여성 매장</div><p>옴플은 PARCO에서 봤던 제품과 비교. 매장에서 살펴보기.</p><div class="move">우메다역권 · 실내/지하 연결 우선</div></div></div>
 <div class="row"><div class="time">13:30</div><div><b>한큐 본점 · 필요한 것만</b><p>관심 있는 매장만 가볍게 둘러보기.</p></div></div>
 <div class="row"><div class="time">14:30</div><div><b>디저트 카페 ★</b><p>파르페 · 푸딩 · 케이크</p><div class="slotchoices"><div class="slotchoice reco"><a href="#cafe">우메다 카페 보기</a><p>커피와 디저트</p><span class="whybadge">필수</span></div></div></div></div>
 <div class="row"><div class="time">15:40</div><div><b>Alpen OSAKA ★</b><div class="brandline">Goldwin · THE NORTH FACE · ASICS · On</div><p>Goldwin·노페 패딩 우선. ASICS NOVABLAST·SUPERBLAST, On 착화·가격 비교. 룰루레몬은 LUCUA 매장으로 이동. 골프·캠핑은 선택.</p></div></div>
 <div class="row"><div class="time">17:10</div><div><b>가챠 · LUCUA</b><p>가챠는 우메다역권에서 짧게. LUCUA는 <b>lululemon</b> 필수. Alpen에서 신발을 봤으면 스포츠 매장 반복은 생략.</p></div></div>
 <div class="row"><div class="time">17:50</div><div><b>점저 ★ 장어</b><p>히츠마부시 또는 장어덮밥.</p></div></div>
-<div class="row"><div class="time">19:00</div><div><b>숙소 복귀 · 1~1.5시간 휴식</b><p>쇼핑백 내려놓고 발목 쉬기.</p><div class="move">우메다 → 신사이바시</div></div></div>
-<div class="row"><div class="time">21:00</div><div><b>로바타야키 ★</b><p>신사이바시·난바권. 해산물·생선·채소·고기를 조금씩. 구이 메뉴 위주로 먹기.</p><div class="slotchoices"><div class="slotchoice reco"><a href="#drink">가게 보기</a><p>자리/컨디션 보고 선택</p><span class="whybadge">필수</span></div></div></div></div>
+<div class="row"><div class="time">19:00</div><div><b>숙소 복귀 · 1~1.5시간 휴식</b><div class="move">우메다 → 신사이바시</div></div></div>
+<div class="row"><div class="time">21:00</div><div><b>로바타야키 ★</b><p>신사이바시·난바권. 해산물·생선·채소·고기를 조금씩. 구이 메뉴 위주로 먹기.</p><div class="slotchoices"><div class="slotchoice reco"><a href="#drink">가게 보기</a><span class="whybadge">필수</span></div></div></div></div>
 </div></div>
 
-<div class="card day daypanel hidden" id="d3"><div class="dayhead"><div><small>10/6 화 · 남쪽 동선</small><h3>신사이바시 · 호리에 · 난바</h3><div class="daypurpose">남쪽은 필요한 매장만 · Orange Street 전체 순회 안 함</div><div class="routebox"><b>이날 꼭 볼 것</b><br>FREITAG → UNIQLO/GU → HUMAN MADE 추가 → MIHARA 공식점 → Supreme<br>Pokémon/POP MART는 필요할 때만 · 중고 카드숍 제외</div></div></div><div class="timeline">
+<div class="card day daypanel hidden" id="d3"><div class="dayhead"><div><small>10/6(화)</small><h3>신사이바시 · 호리에 · 난바</h3><div class="daypurpose">남쪽은 필요한 매장만 · Orange Street 전체 순회 안 함</div><div class="routebox"><b>이날 꼭 볼 것</b><br>FREITAG → UNIQLO/GU → HUMAN MADE 추가 → MIHARA 공식점 → Supreme<br>Pokémon/POP MART는 필요할 때만 · 중고 카드숍 제외</div></div></div><div class="timeline">
 <div class="row"><div class="time">09:30</div><div><b>기상 · 여유 있게 시작</b></div></div>
 <div class="row"><div class="time">10:30</div><div><b>아점 ★</b><p>라멘을 이 슬롯에 넣기 좋음. 단, 평일 런치 메리트가 큰 고급집이 발견되면 교체 가능.</p><div class="slotchoices"><div class="slotchoice reco"><a href="#food">맛집 보기</a><p>짠맛 강한 곳은 후순위</p><span class="whybadge">후보</span></div></div></div></div>
 <div class="row"><div class="time">11:30</div><div><b>신사이바시 · 미나미센바</b><div class="brandline">FREITAG · UNIQLO SHINSAIBASHI · GU · HUMAN MADE 추가 구매</div><p>UNIQLO/GU는 우메다에서 보지 않고 신사이바시에서. HUMAN MADE는 티셔츠 1장 추가 후보.</p></div></div>
 <div class="row"><div class="time">13:00</div><div><b>호리에 핵심만</b><div class="brandline">Maison MIHARA YASUHIRO 공식점 · Supreme · LHP</div><p>Orange Street 전체 순회는 생략. 미하라 공식점 우선, 편집숍은 발견용으로 짧게.</p></div></div>
 <div class="row"><div class="time">14:30</div><div><b>디저트 카페 ★</b><p>5일과 다른 종류로. 화과자·푸딩·케이크·스페셜티 커피 중 하나.</p><div class="slotchoices"><div class="slotchoice reco"><a href="#cafe">호리에·신사이바시 카페 후보 보기</a><p>일본식 디저트 · 커피</p><span class="whybadge">필수</span></div></div></div></div>
-<div class="row"><div class="time">15:40</div><div><b>난바 · 필요한 것만</b><p>다카시마야 할인 대상 확인 · Pokémon/POP MART는 관심 유지. <b>중고 카드숍은 가지 않음.</b> CELINE을 전날 못 봤으면 이 구간에서 가볍게.</p></div></div>
+<div class="row"><div class="time">15:40</div><div><b>난바 · 필요한 것만</b><p>다카시마야 할인 대상 확인 · Pokémon/POP MART는 관심 유지. <b>중고 카드숍은 가지 않음.</b> CELINE 여성 매장은 필요하면 방문.</p></div></div>
 <div class="row"><div class="time">17:00</div><div><b>점저 ★ 자유식</b><p>스시가 5일에 안 들어갔다면 이 슬롯을 스시로 승격. 아니면 소바·우동·돈카츠·야키니쿠 등 그날 가장 맛있어 보이는 곳.</p></div></div>
 <div class="row"><div class="time">18:30</div><div><b>숙소 복귀 · 휴식</b><p>1시간 이상 쉬고 밤 일정.</p></div></div>
 <div class="row"><div class="time">20:30</div><div><b>일반 이자카야 ★</b><p>사시미·구이·조림·계란말이 등 메뉴 폭 넓고 사케 좋은 곳. 전문 야키토리/쿠시카츠보다는 일반 이자카야 우선.</p><div class="slotchoices"><div class="slotchoice reco"><a href="#drink">가게 보기</a><p>Google 평점·리뷰 수 우선</p><span class="whybadge">필수</span></div></div></div></div>
 </div></div>
 
-<div class="card day daypanel hidden" id="d4"><div class="dayhead"><div><small>10/7 수 · 출국</small><h3>난바 · 공항</h3></div></div><div class="timeline">
+<div class="card day daypanel hidden" id="d4"><div class="dayhead"><div><small>10/7(수)</small><h3>난바 · 공항</h3></div></div><div class="timeline">
 <div class="row"><div class="time">08:00</div><div><b>기상 · 짐 정리</b></div></div>
 <div class="row"><div class="time">09:00</div><div><b>숙소 근처 브런치 · 카페</b></div></div>
 <div class="row"><div class="time">11:00</div><div><b>체크아웃 · 짐 보관</b><p>호텔 보관 가능 여부 최종 확인 필요</p></div></div>
@@ -490,7 +497,7 @@ b,strong,.brandline,.row b,.time,.kicker,.place-link,.priority,.nearby-title,.se
 <nav class="nav"><a href="#schedule" class="active">일정</a><a href="#food">먹기</a><a href="#cafe">카페</a><a href="#drink">이자카야</a><a href="#shop">쇼핑</a></nav>
 <script>
 const dayBtns=[...document.querySelectorAll('.daychips .chip')];
-const wx={d1:['10/4 · 흐린 뒤 비','21° / 19° · 비 60%'],d2:['10/5 · 비 오락가락','23° / 18° · 비 60%'],d3:['10/6 · 비 가능','25° / 20° · 비 60%'],d4:['10/7 · 구름','24° / 18° · 비 20%']};dayBtns.forEach(b=>b.onclick=()=>{dayBtns.forEach(x=>x.classList.remove('on'));b.classList.add('on');document.querySelectorAll('.daypanel').forEach(p=>p.classList.add('hidden'));document.getElementById(b.dataset.day).classList.remove('hidden');const w=wx[b.dataset.day],el=document.getElementById('weatherline');if(w&&el)el.innerHTML='<b>'+w[0]+'</b><span>'+w[1]+' · <a href="https://weather.yahoo.co.jp/weather/27/6200/27128.html">예보 ↗</a></span>'});
+const wx={d1:['10/4 · 흐린 뒤 비','21° / 19° · 비 60%'],d2:['10/5 · 비 오락가락','23° / 18° · 비 60%'],d3:['10/6 · 비 가능','25° / 20° · 비 60%'],d4:['10/7 · 구름','24° / 18° · 비 20%']};dayBtns.forEach(b=>b.onclick=()=>{dayBtns.forEach(x=>x.classList.remove('on'));b.classList.add('on');document.querySelectorAll('.daypanel').forEach(p=>p.classList.add('hidden'));document.getElementById(b.dataset.day).classList.remove('hidden');const w=wx[b.dataset.day],el=document.getElementById('weatherline');if(w&&el)el.innerHTML='<b>'+w[0]+'</b><span>'+w[1]+' · <a href="https://www.google.com/search?hl=ko&q=%EC%98%A4%EC%82%AC%EC%B9%B4+%EB%82%A0%EC%94%A8">예보 ↗</a></span>'});
 function applyFoodView(kind='all'){document.querySelectorAll('.fooditem').forEach(c=>c.classList.toggle('hidden',kind!=='all'&&c.dataset.kind!==kind));}
 const filters=[...document.querySelectorAll('.filters .chip')];
 filters.forEach(b=>b.onclick=()=>{filters.forEach(x=>x.classList.remove('on'));b.classList.add('on');const f=b.dataset.filter;applyFoodView(f)});
