@@ -369,6 +369,7 @@ b,strong,.brandline,.row b,.time,.kicker,.place-link,.priority,.nearby-title,.se
 #food .directory-card .kicker{display:flex!important;align-items:center;gap:7px;flex-wrap:wrap;line-height:1.5!important;margin-bottom:5px!important;font-size:10.5px!important;color:#758394!important}
 #food .directory-area-badge{background:#E8EFF7;color:#294867;display:inline-block;padding:3px 7px;border-radius:6px;font-weight:600;white-space:nowrap}
 #food .directory-card .directory-menu{display:none!important}
+#schedule .dayhead .daypurpose{display:none!important}
 </style></head><body><div class="wrap">
 <header class="hero hero-cover"><div class="hero-copy"><div class="eyebrow">OSAKA · 2026</div><h1>오사카<br><span>3박 4일 일정</span></h1><p>10.4 SUN — 10.7 WED · 신사이바시</p></div><div class="hero-photo" role="img" aria-label="오사카성"></div><div class="hero-credit">Osaka Castle · CC BY-SA 4.0</div></header>
 
@@ -377,7 +378,7 @@ b,strong,.brandline,.row b,.time,.kicker,.place-link,.priority,.nearby-title,.se
 <button class="chip on" data-day="d1">10/4 일</button><button class="chip" data-day="d2">10/5 월</button><button class="chip" data-day="d3">10/6 화</button><button class="chip" data-day="d4">10/7 수</button>
 </div><div class="weatherline" id="weatherline"><b>10/4 · 흐린 뒤 비</b><span>21° / 19° · 비 60% · <a href="https://weather.yahoo.co.jp/weather/27/6200/27128.html">예보 ↗</a></span></div>
 
-<div class="card day daypanel" id="d1"><div class="dayhead"><div><small>10/4 일 · 완료</small><h3>도착 → PARCO/다이마루 → 돈키 → 난바</h3><div class="daypurpose">철판요리 · 쇼핑 · 쿠시카츠</div></div></div><div class="timeline">
+<div class="card day daypanel" id="d1"><div class="dayhead"><div><small>10/4 일 · 완료</small><h3>신사이바시 · 난바</h3><div class="daypurpose">철판요리 · 쇼핑 · 쿠시카츠</div></div></div><div class="timeline">
 <div class="row"><div class="time">13:10</div><div><b>간사이공항 도착</b><p>입국 · 수하물 수령</p></div></div>
 <div class="row"><div class="time">14:10~</div><div><b>간사이공항 → 난바</b><p>난카이 라피트 또는 공항급행</p><div class="move">열차 약 35~45분</div></div></div>
 <div class="row"><div class="time">15:10쯤</div><div><b>난바 → 아라시 호텔 신사이바시 No.002</b><p>히가시신사이바시 1-16-5</p><div class="move">기본: 미도스지선 난바→신사이바시 1정거장 + 도보 · 캐리어가 크거나 비 오면 택시</div></div></div>
@@ -393,14 +394,14 @@ b,strong,.brandline,.row b,.time,.kicker,.place-link,.priority,.nearby-title,.se
 <div class="row"><div class="time">22:30</div><div><b>숙소 복귀</b></div></div></div>
 <div class="nearby"><div class="nearby-title">20:00 · 도톤보리·호젠지에서 출출하면</div><div class="pick"><div class="pick-main"><a href="https://www.google.com/maps/search/?api=1&query=%E3%81%9F%E3%81%93%E7%84%BC%E9%81%93%E6%A5%BD+%E3%82%8F%E3%81%AA%E3%81%8B+%E5%8D%83%E6%97%A5%E5%89%8D%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener noreferrer">타코야키 와나카 ↗</a><p>오사카 대표 타코야키 · Tabelog 3.49 / 3,197</p></div><span class="dist">난바</span></div><div class="pick"><div class="pick-main"><a href="https://www.google.com/maps/search/?api=1&query=%E6%B3%95%E5%96%84%E5%AF%BA+%E4%B8%89%E5%B9%B3+%E5%A4%A7%E9%98%AA" target="_blank" rel="noopener noreferrer">호젠지 산페이 ↗</a><p>오코노미야키 · 호젠지요코초에서 바로</p></div><span class="dist">호젠지</span></div></div></div>
 
-<div class="card day daypanel hidden" id="d2"><div class="dayhead"><div><small>10/5 월 · 우메다 · 비</small><h3>맛있는 하루 + 우메다 실내 쇼핑</h3><div class="daypurpose">아점 → 한큐 MEN'S → 디저트 → Alpen → 점저 → 숙소 휴식 → 로바타야키</div></div></div><div class="timeline">
+<div class="card day daypanel hidden" id="d2"><div class="dayhead"><div><small>10/5 월 · 우메다 · 비</small><h3>우메다</h3><div class="daypurpose">아점 → 한큐 MEN'S → 디저트 → Alpen → 점저 → 숙소 휴식 → 로바타야키</div></div></div><div class="timeline">
 <div class="row"><div class="time">09:30</div><div><b>기상 · 발목 컨디션 체크</b><p>오늘은 비 + 실내 중심. 오래 걷기보다 목적지 단위로 이동.</p></div></div>
 
-<div class="row"><div class="time">10:00</div><div><b>아점 · 신사이바시 또는 우메다</b><div class="slotchoices"><div class="slotchoice reco"><a href="#food" data-jump-area="shinsaibashi">① 신사이바시에서 먹고 출발</a><p>숙소 근처에서 여유 있게 먹고 11시 전후 우메다 이동</p><span class="whybadge">편한 선택</span></div>
-<div class="slotchoice"><a href="#food" data-jump-area="umeda">② 우메다 도착해서 먹기</a><p>스시·평일 런치 후 바로 한큐 MEN’S 시작</p></div>
+<div class="row"><div class="time">10:30</div><div><b>숙소 출발</b><p>아점은 숙소 근처 또는 우메다에서</p></div></div><div class="row"><div class="time">10:45~</div><div><b>아점 · 신사이바시 또는 우메다</b><div class="slotchoices"><div class="slotchoice reco"><a href="#food" data-jump-area="shinsaibashi">① 신사이바시에서 먹고 출발</a><p>숙소 근처에서 식사 후 우메다 이동</p><span class="whybadge">편한 선택</span></div>
+<div class="slotchoice"><a href="#food" data-jump-area="umeda">② 우메다 도착해서 먹기</a><p>바로 이동해 식사 후 한큐 MEN’S</p></div>
 
 </div></div></div>
-<div class="row"><div class="time">11:30</div><div><b>우메다 이동</b><p>신사이바시역 → 우메다역 · 미도스지선. 우메다에서 식사한다면 먼저 이동.</p></div></div><div class="row"><div class="time">12:30</div><div><b>Hankyu MEN'S Osaka ★</b><div class="brandline">HOMME PLISSÉ → AURALEE · COMOLI → CELINE/PRADA는 가볍게</div><p>옴플은 PARCO에서 봤던 제품과 비교. 매장에서 살펴보기.</p><div class="move">우메다역권 · 실내/지하 연결 우선</div></div></div>
+<div class="row"><div class="time">11:30 전후</div><div><b>우메다 이동 · 식사 장소에 따라</b><p>숙소 근처에서 먹었다면 식사 후 이동 · 우메다에서 먹는다면 먼저 이동</p></div></div><div class="row"><div class="time">12:30</div><div><b>Hankyu MEN'S Osaka ★</b><div class="brandline">HOMME PLISSÉ → AURALEE · COMOLI → CELINE/PRADA는 가볍게</div><p>옴플은 PARCO에서 봤던 제품과 비교. 매장에서 살펴보기.</p><div class="move">우메다역권 · 실내/지하 연결 우선</div></div></div>
 <div class="row"><div class="time">13:30</div><div><b>한큐 본점 · 필요한 것만</b><p>관심 있는 매장만 가볍게 둘러보기.</p></div></div>
 <div class="row"><div class="time">14:30</div><div><b>디저트 카페 ★</b><p>파르페 · 푸딩 · 케이크</p><div class="slotchoices"><div class="slotchoice reco"><a href="#cafe">우메다 카페 보기</a><p>커피와 디저트</p><span class="whybadge">필수</span></div></div></div></div>
 <div class="row"><div class="time">15:40</div><div><b>Alpen OSAKA ★</b><div class="brandline">Goldwin · THE NORTH FACE · ASICS · On</div><p>Goldwin·노페 패딩 우선. ASICS NOVABLAST·SUPERBLAST, On 착화·가격 비교. 룰루레몬은 LUCUA 매장으로 이동. 골프·캠핑은 선택.</p></div></div>
@@ -410,7 +411,7 @@ b,strong,.brandline,.row b,.time,.kicker,.place-link,.priority,.nearby-title,.se
 <div class="row"><div class="time">21:00</div><div><b>로바타야키 ★</b><p>신사이바시·난바권. 해산물·생선·채소·고기를 조금씩. 구이 메뉴 위주로 먹기.</p><div class="slotchoices"><div class="slotchoice reco"><a href="#drink">가게 보기</a><p>자리/컨디션 보고 선택</p><span class="whybadge">필수</span></div></div></div></div>
 </div></div>
 
-<div class="card day daypanel hidden" id="d3"><div class="dayhead"><div><small>10/6 화 · 남쪽 동선</small><h3>신사이바시 → 미나미센바 → 호리에 → 난바</h3><div class="daypurpose">남쪽은 필요한 매장만 · Orange Street 전체 순회 안 함</div><div class="routebox"><b>이날 꼭 볼 것</b><br>FREITAG → UNIQLO/GU → HUMAN MADE 추가 → MIHARA 공식점 → Supreme<br>Pokémon/POP MART는 필요할 때만 · 중고 카드숍 제외</div></div></div><div class="timeline">
+<div class="card day daypanel hidden" id="d3"><div class="dayhead"><div><small>10/6 화 · 남쪽 동선</small><h3>신사이바시 · 호리에 · 난바</h3><div class="daypurpose">남쪽은 필요한 매장만 · Orange Street 전체 순회 안 함</div><div class="routebox"><b>이날 꼭 볼 것</b><br>FREITAG → UNIQLO/GU → HUMAN MADE 추가 → MIHARA 공식점 → Supreme<br>Pokémon/POP MART는 필요할 때만 · 중고 카드숍 제외</div></div></div><div class="timeline">
 <div class="row"><div class="time">09:30</div><div><b>기상 · 여유 있게 시작</b></div></div>
 <div class="row"><div class="time">10:30</div><div><b>아점 ★</b><p>라멘을 이 슬롯에 넣기 좋음. 단, 평일 런치 메리트가 큰 고급집이 발견되면 교체 가능.</p><div class="slotchoices"><div class="slotchoice reco"><a href="#food">맛집 보기</a><p>짠맛 강한 곳은 후순위</p><span class="whybadge">후보</span></div></div></div></div>
 <div class="row"><div class="time">11:30</div><div><b>신사이바시 · 미나미센바</b><div class="brandline">FREITAG · UNIQLO SHINSAIBASHI · GU · HUMAN MADE 추가 구매</div><p>UNIQLO/GU는 우메다에서 보지 않고 신사이바시에서. HUMAN MADE는 티셔츠 1장 추가 후보.</p></div></div>
@@ -422,7 +423,7 @@ b,strong,.brandline,.row b,.time,.kicker,.place-link,.priority,.nearby-title,.se
 <div class="row"><div class="time">20:30</div><div><b>일반 이자카야 ★</b><p>사시미·구이·조림·계란말이 등 메뉴 폭 넓고 사케 좋은 곳. 전문 야키토리/쿠시카츠보다는 일반 이자카야 우선.</p><div class="slotchoices"><div class="slotchoice reco"><a href="#drink">가게 보기</a><p>Google 평점·리뷰 수 우선</p><span class="whybadge">필수</span></div></div></div></div>
 </div></div>
 
-<div class="card day daypanel hidden" id="d4"><div class="dayhead"><div><small>10/7 수 · 출국</small><h3>마지막 쇼핑 → 간사이공항</h3></div></div><div class="timeline">
+<div class="card day daypanel hidden" id="d4"><div class="dayhead"><div><small>10/7 수 · 출국</small><h3>난바 · 공항</h3></div></div><div class="timeline">
 <div class="row"><div class="time">08:00</div><div><b>기상 · 짐 정리</b></div></div>
 <div class="row"><div class="time">09:00</div><div><b>숙소 근처 브런치 · 카페</b></div></div>
 <div class="row"><div class="time">11:00</div><div><b>체크아웃 · 짐 보관</b><p>호텔 보관 가능 여부 최종 확인 필요</p></div></div>
