@@ -629,14 +629,6 @@ const updateDaybar=()=>{
 };
 window.addEventListener('scroll',updateDaybar,{passive:true}); updateDaybar();
 
-// Only use each venue's own Maps listing for its photos; never reuse generic photos.
-document.querySelectorAll('#food .directory-card,#cafe .card,#drink .card').forEach(card=>{
- const link=card.querySelector('a.place-link[href*="google.com/maps"]');
- if(!link||card.querySelector('.photo-access'))return;
- const a=document.createElement('a');a.className='venue-photo-link';a.href=link.href;a.target='_blank';a.rel='noopener noreferrer';
- a.textContent='매장 사진 ↗';a.setAttribute('aria-label',link.textContent.trim()+' 실제 사진 확인');
- card.appendChild(a);
-});
 // Shop visit marks persist only on the current device.
 document.querySelectorAll('.shop-check input').forEach((box,i)=>{
  const key='osaka-shop-visited-'+i;
@@ -687,5 +679,5 @@ document.querySelectorAll('.shop-check input').forEach((box,i)=>{
 // Remove all legacy photo actions and placeholder thumbnails, including generated ones.
 document.querySelectorAll('.venue-photo-link,.directory-photo,.directory-photo-credit,.photo-access,.photo-access-wrap,.photo-holder').forEach(el=>el.remove());
 document.querySelectorAll('#food .directory-card').forEach(el=>el.classList.remove('has-verified-photo'));
-</script><!-- Food illustrations are category examples, not merchant photography. Credits: Japanese Sushi platter (Luvpixy, CC BY-SA 4.0); Hitsumabushi by Joi (Joi, CC BY 2.0); Souffe pancakes (76651) (Rhododendrites, CC BY-SA 4.0); A bowl of ramen in Osaka (Joli Rumi, Wikimedia Commons). -->
+</script>
 </body></html>
