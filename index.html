@@ -370,8 +370,20 @@ b,strong,.brandline,.row b,.time,.kicker,.place-link,.priority,.nearby-title,.se
 #food .directory-area-badge{background:#E8EFF7;color:#294867;display:inline-block;padding:3px 7px;border-radius:6px;font-weight:600;white-space:nowrap}
 #food .directory-card .directory-menu{display:none!important}
 #schedule .dayhead .daypurpose{display:none!important}
+
+/* Hero simplification and right weighted castle framing */
+.hero-cover{min-height:170px!important;background:#EDF2F8!important;padding:24px 19px!important}
+.hero-cover .hero-copy{max-width:65%!important;align-self:center!important}
+.hero-cover h1{font-size:36px!important;font-weight:650!important;line-height:1.2!important;margin:0 0 7px!important;letter-spacing:-.055em!important}
+.hero-cover .hero-copy p{font-size:12px!important;color:#8492A3!important;font-weight:450!important;letter-spacing:-.02em!important}
+.hero-photo{transform:translateX(25%)!important;width:100%!important;left:0!important;right:auto!important;background-position:center center!important;-webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 8%,rgba(0,0,0,.12) 25%,rgba(0,0,0,.55) 42%,#000 73%)!important;mask-image:linear-gradient(90deg,transparent 0%,transparent 8%,rgba(0,0,0,.12) 25%,rgba(0,0,0,.55) 42%,#000 73%)!important}
+@media(max-width:420px){.hero-photo{transform:translateX(26%)!important}}
+/* Image architecture: only exact-venue verified and licensed sources, no reused generic thumbnails. */
+#food .directory-card.has-verified-photo{display:grid!important;grid-template-columns:minmax(0,1fr) 92px!important;column-gap:10px!important;align-items:start!important}
+#food .directory-card.has-verified-photo>.directory-photo{grid-column:2;grid-row:1 / span 4;width:92px;height:92px;object-fit:cover;border-radius:9px;background:#EDF1F5}
+#food .directory-card.has-verified-photo>.kicker,#food .directory-card.has-verified-photo>.place-link,#food .directory-card.has-verified-photo>.directory-score,#food .directory-card.has-verified-photo>.venue-photo-link{grid-column:1;min-width:0}
 </style></head><body><div class="wrap">
-<header class="hero hero-cover"><div class="hero-copy"><div class="eyebrow">OSAKA · 2026</div><h1>오사카<br><span>3박 4일 일정</span></h1><p>10.4 SUN — 10.7 WED · 신사이바시</p></div><div class="hero-photo" role="img" aria-label="오사카성"></div><div class="hero-credit">Osaka Castle · CC BY-SA 4.0</div></header>
+<header class="hero hero-cover"><div class="hero-copy"><h1>오사카</h1><p>10/4(일)~7(수) · 3박 4일</p></div><div class="hero-photo" role="img" aria-label="오사카성"></div><div class="hero-credit">Osaka Castle · CC BY-SA 4.0</div></header>
 
 <section id="schedule" class="section"><div class="head schedule-heading"><h2>일정 선택</h2></div>
 <div class="scroller daychips">
@@ -628,5 +640,14 @@ document.querySelectorAll('.shop-check input').forEach((box,i)=>{
   if(score&&!score.querySelector('.directory-budget')){const node=document.createElement('span');node.className='directory-budget';node.textContent=(price?'대략 ':'참고 예산 ')+(price?.[0]||budgets[card.dataset.kind]||'매장별 상이');score.appendChild(node);}
  }));
 })();
+
+/* Approved venue-specific imagery only. Keep empty until image owner/license and venue verified. */
+const verifiedVenuePhotos={};
+document.querySelectorAll('#food .directory-card').forEach(card=>{
+ const link=card.querySelector('a.place-link[href]');if(!link)return;
+ const key=link.href;const photo=verifiedVenuePhotos[key];if(!photo?.url||!photo?.credit)return;
+ const img=document.createElement('img');img.className='directory-photo';img.src=photo.url;img.alt=link.textContent.trim()+' 음식 사진';img.loading='lazy';img.referrerPolicy='no-referrer';img.title=photo.credit;
+ img.onerror=()=>{img.remove();card.classList.remove('has-verified-photo')};card.classList.add('has-verified-photo');card.appendChild(img);
+});
 </script><!-- Food illustrations are category examples, not merchant photography. Credits: Japanese Sushi platter (Luvpixy, CC BY-SA 4.0); Hitsumabushi by Joi (Joi, CC BY 2.0); Souffe pancakes (76651) (Rhododendrites, CC BY-SA 4.0); A bowl of ramen in Osaka (Joli Rumi, Wikimedia Commons). -->
 </body></html>
